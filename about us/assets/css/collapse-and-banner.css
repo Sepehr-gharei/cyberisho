@@ -1,0 +1,92 @@
+.collapse-container {
+    position: relative;
+    background: var(--background-color);
+    box-shadow: 0px -5px 18px 14px var(--light-white-color);
+    border-radius: 20px;
+    padding: 0 45px;
+}
+
+/* منوی عناوین */
+.collapse-menu {
+    display: flex;
+}
+
+.collapse-item {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 45px 0 45px;
+    margin: 0 20px;
+}
+
+.collapse-item.active {
+    background: var(--light-white-color);
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    border-bottom-right-radius: 10px;
+    margin-top: -12px;
+    color: var(--dark-blue-text-color);
+}
+
+.collapse-item.active::after {
+    position: absolute;
+    box-shadow: -3px -6px 0px 3px var(--light-white-color);
+    height: 23px;
+    width: 13px;
+    content: "";
+    right: -13px;
+    border-top-left-radius: 30px;
+    top: 12px;
+}
+
+.collapse-item.active::before {
+    position: absolute;
+    box-shadow: 3px -6px 0px 3px var(--light-white-color);
+    height: 23px;
+    width: 13px;
+    content: "";
+    left: -13px;
+    border-top-right-radius: 30px;
+    top: 12px;
+}
+
+/* محتوای داخلی */
+.collapse-content-container {
+    padding: 20px;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.collapse-content p {
+    margin: 10px 0;
+}
+
+/* نمایش محتوا */
+.collapse-content.active {
+    max-height: 9999999px; /* ارتفاع حداکثری برای نمایش محتوا */
+    padding: 10px;
+}
+
+
+.banner-container {
+    text-align: center;
+    padding: 35px 0px;
+    background-color: var(--light-green-color);
+    margin-bottom: 85px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.banner-container h4 {
+    font-weight: 100;
+    font-size: 18px;
+}
+.banner-container h2 {
+font-size: 28px;
+}
