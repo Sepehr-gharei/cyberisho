@@ -220,13 +220,20 @@
   footer .main-section .contact .footer {
     align-self: center;
   }
+  .chart-container .left-side img.large {
+    display: block;
+  }
+  .chart-container .left-side img.small {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
   .chart-container .right-side p {
-    font-size: 12px;
+    font-size: 18px;
   }
   .chart-container .right-side h3 {
-    font-size: 18px;
+    font-size: 28px;
+    padding-top: 10px;
   }
   .more-information .right-side-information img {
     height: 220px;
@@ -274,5 +281,13 @@
   }
   nav.small-responsive .logo a {
     padding-right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .chart-container .right-side h3 {
+    font-size: 18px;
+  }
+  .chart-container .right-side p {
+    font-size: 12px;
   }
 }

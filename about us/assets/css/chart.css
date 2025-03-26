@@ -30,3 +30,6 @@
 .chart-container .left-side img {
     width: 100%;
 }
+.chart-container .left-side img.large {
+    display: none;
+  }
