@@ -14,6 +14,7 @@
   --light-green-color: #00ff73;
   --dark-blue-color: #2b00c6;
   --dark-blue-text-color: #2800c4;
+  --light-blue-text-color : #9581e6;
   --light-blue-color: #e7e2ff;
   --light-white-color: #f6f4ff;
   --light-white-text: #fefffd;
@@ -21,6 +22,8 @@
   --light-shadow-black-color: #151515;
   --normal-text-color: #6a6a6a;
   --light-green-color: #00ff73;
+  --normal-yellow-color : #f9d42b;
+  --normal-red-color : #c52f48;
 }
 
 /*************** end root ****************/
@@ -100,6 +103,9 @@ a {
 }
 .d-flex {
   display: flex;
+}
+.justify-content-center {
+  justify-content: center;
 }
 @media (min-width: 576px) {
   .container {
@@ -850,48 +856,52 @@ header .sidebar ul li a:hover {
 }
 /*************** end nav  ***************/
 /*************** start about us  ***************/
-.about-us-container {
+.about-us-container , .contact-us-container {
   margin-top: 85px;
 }
 
-.about-us-container .au-text {
+.about-us-container .au-text  , .contact-us-container .au-text{
   position: relative;
 }
-.about-us-container .au-text small {
+.about-us-container .au-text small , .contact-us-container .au-text small{
   position: absolute;
   top: -10px;
   color: var(--light-shadow-white-color);
   letter-spacing: 0.1rem;
 }
-.about-us-container .au-text h2 {
+.about-us-container .au-text h2 , .contact-us-container .au-text h2 {
   font-size: 28px;
 }
-.about-us-container .breadcrumb {
+.about-us-container .breadcrumb , .contact-us-container .breadcrumb{
   margin: 5px 0px;
 }
 .about-us-container .breadcrumb .home-page,
-.about-us-container .breadcrumb .home-page a {
+.about-us-container .breadcrumb .home-page a ,
+.contact-us-container .breadcrumb .home-page,
+.contact-us-container .breadcrumb .home-page a {
   display: flex;
   align-items: center;
 }
-.about-us-container .breadcrumb svg {
+.about-us-container .breadcrumb svg , .contact-us-container .breadcrumb svg  {
   width: 15px;
   height: 15px;
 }
-.about-us-container .breadcrumb .arrow-icon {
+.about-us-container .breadcrumb .arrow-icon ,.contact-us-container .breadcrumb .arrow-icon  {
   display: flex;
   align-items: center;
 }
-.about-us-container .breadcrumb .arrow-icon svg {
+.about-us-container .breadcrumb .arrow-icon svg , .contact-us-container .breadcrumb .arrow-icon svg {
   fill: none;
   margin: 0 6px;
   width: 13px;
   height: 13px;
 }
-.about-us-container .breadcrumb {
+.about-us-container .breadcrumb , .contact-us-container .breadcrumb {
   align-items: center;
 }
-.about-us-container .breadcrumb .breadcrumb-page {
+.about-us-container .breadcrumb .breadcrumb-page ,
+.contact-us-container .breadcrumb .breadcrumb-page 
+{
   font-size: 14px;
 }
 
@@ -1311,6 +1321,8 @@ footer .logo-section h2 {
 }
 footer .text-section strong {
   font-weight: 100;
+  text-align: justify;
+  display: flex;
 }
 footer .main-section {
   padding-top: 15px;
@@ -1468,7 +1480,11 @@ footer .samandehi-2 {
 }
 /**************** end footer ****************/
 /**************** start responsive  ****************/
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
+  .more-information .right-side-information img{
+    height: 280px;
+    object-fit: cover;
+  }
 }
 @media (max-width: 1200px) {
   .more-information .right-side-information img {
@@ -1696,6 +1712,18 @@ footer .samandehi-2 {
   .chart-container .left-side img.small {
     display: none;
   }
+  header nav {
+    margin-top: 35px;
+}
+.about-us-container , .contact-us-container{
+  margin-top: 50px;
+}
+footer .main-section .contact .header {
+  padding: 10px 0px;
+}
+footer {
+  margin-bottom: 50px;
+}
 }
 @media (max-width: 576px) {
   .chart-container .right-side p {
@@ -1761,4 +1789,5 @@ footer .samandehi-2 {
     font-size: 12px;
   }
 }
+
 /**************** end responsive ****************/
