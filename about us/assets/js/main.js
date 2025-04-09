@@ -78,25 +78,21 @@ collapseItems.forEach(item => {
 
 //************************** back to top  **************************
 
-const backToTopBtn = document.getElementById("back-to-top-btn");
+// انتخاب دکمه‌ها با استفاده از querySelectorAll
+const buttons = document.querySelectorAll('#back-to-top-btn-1, #back-to-top-btn-2');
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-};
+// تعریف تابع برای حرکت به بالای صفحه
+function scrollToTop() {
+  window.scrollTo({
+    top: 0, // به بالای صفحه برود
+    behavior: 'smooth' // حرکت به صورت نرم (smooth scrolling)
+  });
+}
 
-// When the user clicks on the button, scroll to the top of the document smoothly
-backToTopBtn.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Smooth scrolling effect
-    });
+// افزودن event listener به هر دکمه
+buttons.forEach(button => {
+  button.addEventListener('click', scrollToTop);
 });
-
 
 
 
@@ -123,4 +119,27 @@ document.addEventListener('DOMContentLoaded', function() {
     sidebar.classList.remove('open');
     overlay.classList.remove('active');
   });
+});
+
+
+
+// تابع تبدیل اعداد انگلیسی به فارسی
+function toPersianNum(num) {
+  const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+  return num.toString().replace(/\d/g, digit => persianNumbers[digit]);
+}
+
+// تبدیل تمام اعداد در صفحه
+document.addEventListener('DOMContentLoaded', function() {
+  const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+  );
+
+  let node;
+  while ((node = walker.nextNode())) {
+      node.textContent = node.textContent.replace(/\d+/g, num => toPersianNum(num));
+  }
 });

@@ -14,7 +14,7 @@
   --light-green-color: #00ff73;
   --dark-blue-color: #2b00c6;
   --dark-blue-text-color: #2800c4;
-  --light-blue-text-color : #9581e6;
+  --light-blue-text-color: #9581e6;
   --light-blue-color: #e7e2ff;
   --light-white-color: #f6f4ff;
   --light-white-text: #fefffd;
@@ -22,62 +22,26 @@
   --light-shadow-black-color: #151515;
   --normal-text-color: #6a6a6a;
   --light-green-color: #00ff73;
-  --normal-yellow-color : #f9d42b;
-  --normal-red-color : #c52f48;
+  --normal-yellow-color: #f9d42b;
+  --normal-red-color: #c52f48;
 }
 
 /*************** end root ****************/
 
 @font-face {
-  font-family: iransans;
-  src: url(../fonts/IRANSansX-Medium.woff) format("woff");
+  font-family: peyda-regular;
+  src: url(../fonts/PeydaWeb-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: yekanbakh-m;
-  src: url(../fonts/yekan\ bakh\ en\ 05\ medium.woff2) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: yekanbakh-b;
-  src: url(../fonts/yekan\ bakh\ en\ 06\ bold.woff2) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: yekanbakh;
-  src: url(../fonts/yekan\ bakh\ en\ 01\ hairline.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: iranyekan-b;
-  src: url(/assets/fonts/iranyekanwebbold.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: iranyekan-m;
-  src: url(/assets/fonts/iranyekanwebmedium.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: iranyekan;
-  src: url(/assets/fonts/iranyekanwebregular.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: iranyekan-s;
-  src: url(/assets/fonts/iranyekanwebthin.woff) format("woff");
+  font-family: peyda-bold;
+  src: url(../fonts/PeydaWeb-Bold.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 * {
-  font-family: iransans;
+  font-family: peyda-regular;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -755,26 +719,67 @@ header nav .nav-items .logo h1::after {
 }
 
 nav.small-responsive .logo a {
-  font-size: 26px;
+  font-size: 32px;
   color: var(--dark-blue-text-color);
+  font-family: peyda-bold;
 }
 
-nav.small-responsive .left-side svg {
-  width: 30px;
-  height: 30px;
+nav.small-responsive svg {
+  width: 38px;
+  height: 38px;
   margin: 0;
   padding: 0;
 }
-nav.small-responsive .left-side {
+nav.small-responsive svg use {
+  fill: var(--dark-blue-color);
+}
+
+nav.small-responsive {
   align-items: center;
   display: flex;
 }
-nav.small-responsive .left-side button {
+nav.small-responsive button {
   border: unset;
   margin: 0 5px;
-  padding: 8px 10px 5px 10px;
+  padding: 8px 10px 15px 10px;
   border-radius: 10px;
   cursor: pointer;
+  background: unset;
+}
+nav.small-responsive .logo {
+  background: var(--light-white-color);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-bottom: -14px;
+  padding: 0 50px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+nav.small-responsive .logo::after {
+  position: absolute;
+  height: 9px;
+  z-index: 300;
+  width: 11px;
+  content: "";
+  right: -3px;
+  border-top-left-radius: 17px;
+  bottom: 5px;
+  box-shadow: -2px -6px 1px var(--light-white-color);
+  border: 0;
+}
+nav.small-responsive .logo::before {
+  position: absolute;
+  height: 9px;
+  z-index: 300;
+  width: 11px;
+  content: "";
+  left: -3px;
+  border-top-right-radius: 17px;
+  bottom: 5px;
+  box-shadow: 2px -6px 1px var(--light-white-color);
+  border: 0;
 }
 header .sidebar svg {
   width: 30px;
@@ -856,52 +861,61 @@ header .sidebar ul li a:hover {
 }
 /*************** end nav  ***************/
 /*************** start about us  ***************/
-.about-us-container , .contact-us-container {
+.about-us-container,
+.contact-us-container {
   margin-top: 85px;
 }
 
-.about-us-container .au-text  , .contact-us-container .au-text{
+.about-us-container .au-text,
+.contact-us-container .au-text {
   position: relative;
 }
-.about-us-container .au-text small , .contact-us-container .au-text small{
+.about-us-container .au-text small,
+.contact-us-container .au-text small {
   position: absolute;
   top: -10px;
   color: var(--light-shadow-white-color);
   letter-spacing: 0.1rem;
 }
-.about-us-container .au-text h2 , .contact-us-container .au-text h2 {
+.about-us-container .au-text h2,
+.contact-us-container .au-text h2 {
   font-size: 28px;
+  font-family: peyda-bold;
 }
-.about-us-container .breadcrumb , .contact-us-container .breadcrumb{
+.about-us-container .breadcrumb,
+.contact-us-container .breadcrumb {
   margin: 5px 0px;
 }
 .about-us-container .breadcrumb .home-page,
-.about-us-container .breadcrumb .home-page a ,
+.about-us-container .breadcrumb .home-page a,
 .contact-us-container .breadcrumb .home-page,
 .contact-us-container .breadcrumb .home-page a {
   display: flex;
   align-items: center;
 }
-.about-us-container .breadcrumb svg , .contact-us-container .breadcrumb svg  {
+.about-us-container .breadcrumb svg,
+.contact-us-container .breadcrumb svg {
   width: 15px;
   height: 15px;
 }
-.about-us-container .breadcrumb .arrow-icon ,.contact-us-container .breadcrumb .arrow-icon  {
+.about-us-container .breadcrumb .arrow-icon,
+.contact-us-container .breadcrumb .arrow-icon {
   display: flex;
   align-items: center;
 }
-.about-us-container .breadcrumb .arrow-icon svg , .contact-us-container .breadcrumb .arrow-icon svg {
+.about-us-container .breadcrumb .arrow-icon svg,
+.contact-us-container .breadcrumb .arrow-icon svg {
   fill: none;
   margin: 0 6px;
   width: 13px;
   height: 13px;
 }
-.about-us-container .breadcrumb , .contact-us-container .breadcrumb {
+.about-us-container .breadcrumb,
+.contact-us-container .breadcrumb {
   align-items: center;
 }
-.about-us-container .breadcrumb .breadcrumb-page ,
-.contact-us-container .breadcrumb .breadcrumb-page 
-{
+.about-us-container .breadcrumb .breadcrumb-page,
+.contact-us-container .breadcrumb .breadcrumb-page {
   font-size: 14px;
 }
 
@@ -968,19 +982,21 @@ header .sidebar ul li a:hover {
   height: 370px;
   border-radius: 20px;
 }
-.more-information .video-container::after {
+
+.more-information .view-container::after {
   background: inherit;
   margin-top: -24px;
   border-bottom-right-radius: 22px;
   width: 26px;
-  right: 310.16px;
+  left: -25.16px;
   bottom: 0px;
   height: 26px;
   box-shadow: 7px 7px 0 #ffffff;
   position: absolute;
+  background-color: transparent;
   content: "";
 }
-.more-information .video-container::before {
+.more-information .view-container::before {
   background: inherit;
   margin-top: -24px;
   border-bottom-right-radius: 22px;
@@ -991,7 +1007,9 @@ header .sidebar ul li a:hover {
   box-shadow: 7px 7px 0 #ffffff;
   position: absolute;
   content: "";
+  background-color: transparent;
 }
+
 .more-information .video-container .play-button {
   position: absolute;
   top: 50%;
@@ -1033,14 +1051,21 @@ header .sidebar ul li a:hover {
   bottom: 0;
   position: absolute;
   color: var(--normal-text-color);
+  bottom: 15px;
+  right: -1px;
 }
 .more-information .video-container .view-container a {
   color: var(--dark-blue-text-color);
+  font-family: peyda-bold;
 }
 .more-information .video-container .view-container small {
   padding: 0 5px;
   font-size: 16px;
+
   color: var(--normal-text-color);
+}
+.more-information .video-container .view-container span {
+  font-family: peyda-bold;
 }
 /* پنهان کردن افکت‌های after و before */
 .video-container.hide-effects::after,
@@ -1054,8 +1079,12 @@ header .sidebar ul li a:hover {
 }
 
 .more-information .right-side-information img {
+  margin-bottom: 15px;
+  padding: 0 10px 0 5px;
   width: 100%;
   border-radius: 20px;
+  object-fit: cover;
+  height: 253px;
 }
 .more-information .right-side-information .wrapper {
   flex-direction: column;
@@ -1068,6 +1097,10 @@ header .sidebar ul li a:hover {
   background: var(--light-green-color);
   text-align: center;
   color: var(--text-color);
+  margin: 0 10px 0 5px;
+}
+.more-information .right-side-information .inf-container p {
+  padding: 4px 0;
 }
 
 .more-information .left-side-information .wrapper {
@@ -1079,6 +1112,7 @@ header .sidebar ul li a:hover {
   padding: 30px 45px;
   color: var(--light-white-text);
   background: var(--dark-blue-color);
+  margin: 0 5px 10px 0;
 }
 .more-information .left-side-information .wrapper .inf-top p {
   padding-bottom: 10px;
@@ -1089,12 +1123,12 @@ header .sidebar ul li a:hover {
   justify-content: center;
   display: flex;
   border-radius: 20px;
-  padding: 15px;
-  margin-top: 12px;
+  padding: 13px 15px;
   direction: ltr;
   background: var(--light-blue-color);
   color: var(--text-color);
   flex-direction: column;
+  margin: 11px 5px;
 }
 .more-information .left-side-information .wrapper .inf-bottom svg {
   width: 80px;
@@ -1102,7 +1136,7 @@ header .sidebar ul li a:hover {
 }
 .more-information .left-side-information .wrapper .inf-bottom p:first-of-type {
   font-size: 17px;
-  font-weight: 600;
+  font-family: peyda-bold;
 }
 /**************** end more information   ****************/
 /**************** start chart   ****************/
@@ -1134,6 +1168,7 @@ header .sidebar ul li a:hover {
 }
 .chart-container .right-side h3 {
   font-size: 42px;
+  font-family: peyda-bold;
 }
 
 .chart-container .left-side {
@@ -1154,7 +1189,28 @@ header .sidebar ul li a:hover {
   border-radius: 20px;
   padding: 0 45px;
 }
+/* تنظیمات پایه برای محتوا */
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  opacity: 0; /* شروع با شفافیت صفر */
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease; /* انیمیشن برای باز شدن */
+}
 
+/* حالت فعال برای نمایش محتوا */
+.collapse-content.active {
+  max-height: 500px; /* مقدار کافی برای باز شدن - می‌توانید تنظیم کنید */
+  opacity: 1; /* شفافیت کامل */
+  padding: 10px; /* پدینگ در حالت باز */
+}
+
+/* اطمینان از اینکه محتوا به درستی نمایش داده می‌شود */
+.collapse-content-container {
+  padding: 20px;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
 /* منوی عناوین */
 .collapse-menu {
   display: flex;
@@ -1180,7 +1236,7 @@ header .sidebar ul li a:hover {
 
 .collapse-item.active::after {
   position: absolute;
-  box-shadow: -3px -6px 0px 3px var(--light-white-color);
+  box-shadow: -6px -6px 0px 3px var(--light-white-color);
   height: 23px;
   width: 13px;
   content: "";
@@ -1191,7 +1247,7 @@ header .sidebar ul li a:hover {
 
 .collapse-item.active::before {
   position: absolute;
-  box-shadow: 3px -6px 0px 3px var(--light-white-color);
+  box-shadow: 6px -6px 0px 3px var(--light-white-color);
   height: 23px;
   width: 13px;
   content: "";
@@ -1248,6 +1304,9 @@ footer .back-to-top-section {
   justify-content: center;
   display: flex;
 }
+footer .enamad .copyright-responsive {
+  display: none;
+}
 footer .back-to-top-section button {
   margin-top: -20px;
   display: block;
@@ -1259,6 +1318,9 @@ footer .back-to-top-section button {
   border: 2px solid var(--light-white-color);
   color: var(--normal-text-color);
   cursor: pointer;
+}
+footer .back-to-top-section .scroll-to-top-responsive button {
+  display: none;
 }
 footer .back-to-top-section .scroll-to-top {
   position: relative;
@@ -1318,11 +1380,13 @@ footer .logo-section h2 {
   margin-bottom: 10px;
   color: var(--dark-blue-text-color);
   text-align: center;
+  font-family: peyda-bold;
 }
 footer .text-section strong {
   font-weight: 100;
   text-align: justify;
   display: flex;
+  color: var(--normal-text-color);
 }
 footer .main-section {
   padding-top: 15px;
@@ -1335,12 +1399,15 @@ footer .main-section .contact .header {
   padding: 25px 0;
   border-bottom: 2px solid var(--light-blue-color);
 }
+footer .main-section .contact .header a {
+  color: var(--normal-text-color);
+}
 footer .main-section .contact .footer .telephone,
 footer .main-section .contact .footer .location {
   align-items: center;
   padding: 0;
-  justify-content: space-around;
   display: flex;
+  justify-content: space-around;
 }
 footer .main-section .contact .footer .telephone svg,
 footer .main-section .contact .footer .location svg {
@@ -1349,6 +1416,8 @@ footer .main-section .contact .footer .location svg {
 }
 footer .main-section .contact .footer .telephone .number {
   padding: 10px;
+  color: var(--normal-text-color);
+  direction: ltr;
 }
 footer .main-section .contact .footer .telephone .number pre {
   padding: 5px 0;
@@ -1360,6 +1429,7 @@ footer .main-section .contact .footer .telephone .number pre:first-of-type {
 footer .main-section .contact .footer .location .text {
   font-weight: 600;
   font-size: 14px;
+  color: var(--normal-text-color);
 }
 footer .enamad,
 footer .samandehi,
@@ -1481,8 +1551,8 @@ footer .samandehi-2 {
 /**************** end footer ****************/
 /**************** start responsive  ****************/
 @media (min-width: 1400px) {
-  .more-information .right-side-information img{
-    height: 280px;
+  .more-information .right-side-information img {
+    height: 246px;
     object-fit: cover;
   }
 }
@@ -1508,8 +1578,76 @@ footer .samandehi-2 {
     width: 60px;
     height: 60px;
   }
+  .more-information .right-side-information .inf-container {
+    margin: 0 5px 0 0px;
+  }
+  .more-information .right-side-information .inf-container p {
+    padding: 2px 0;
+  }
+  .more-information .right-side-information img {
+    margin-bottom: 6px;
+    padding: 0 5px 0 0px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 185px;
+  }
+  .more-information .left-side-information .wrapper .inf-top {
+    margin: 0;
+  }
+  .more-information .video-container .view-container {
+    bottom: 10px;
+  }
+  .more-information .right-side-information img {
+    margin-bottom: 10px;
+  }
+  .more-information .video-container .view-container small {
+    font-size: 22px;
+  }
 }
 @media (max-width: 992px) {
+  .collapse-menu {
+    display: flex;
+    flex-direction: row; /* چیدمان افقی */
+    overflow-x: auto; /* فعال کردن اسکرول افقی */
+    overflow-y: hidden; /* غیرفعال کردن اسکرول عمودی */
+    white-space: nowrap; /* جلوگیری از شکستن خطوط */
+    padding: 10px 0; /* فاصله داخلی */
+    scroll-behavior: smooth; /* اسکرول نرم (اختیاری) */
+  }
+
+  /* تنظیم استایل هر آیتم */
+  .collapse-item {
+    display: inline-block; /* قرار گرفتن در یک خط */
+    flex-shrink: 0; /* جلوگیری از کوچک شدن آیتم‌ها */
+  }
+
+  /* غیرفعال کردن افکت‌های دسکتاپ در موبایل */
+  .collapse-item.active {
+    margin-top: -22px; /* حذف فاصله اضافی */
+    border-radius: 10px; /* گرد کردن گوشه‌ها */
+    padding: 10px 20px; /* تنظیم پدینگ */
+  }
+
+  /* جلوگیری از سرریز و اسکرول نرم‌افزار */
+  .collapse-menu::-webkit-scrollbar {
+    height: 8px; /* ارتفاع اسکرول‌بار */
+  }
+
+  .collapse-menu::-webkit-scrollbar-thumb {
+    background: var(--light-white-color); /* رنگ اسکرول‌بار */
+    border-radius: 10px;
+  }
+
+  .collapse-menu::-webkit-scrollbar-track {
+    background: var(--background-color); /* رنگ پس‌زمینه اسکرول */
+  }
+  header {
+    background-color: var(--light-white-color);
+  }
+  header nav {
+    margin-top: 20px;
+  }
   .more-information .video-container .video {
     height: 340px;
   }
@@ -1521,21 +1659,24 @@ footer .samandehi-2 {
     margin-bottom: 50px;
   }
   .more-information .right-side-information {
-    width: 40%;
+    width: 100%;
   }
   .more-information .right-side-information img {
-    height: unset;
+    height: auto;
   }
   .more-information .right-side-information .inf-container {
     font-size: 20px;
     padding: 29px 0;
   }
   .more-information .left-side-information {
-    width: 60%;
+    width: 100%;
   }
   .more-information .left-side-information .wrapper .inf-top {
     padding: 35px 120px;
   }
+  /* .more-information .left-side-information .wrapper .inf-top {
+    padding: 35px 267px;
+} */
   .more-information .left-side-information .wrapper .inf-top p {
     padding-bottom: 15px;
   }
@@ -1580,8 +1721,65 @@ footer .samandehi-2 {
     width: 50px;
     height: 50px;
   }
+  .more-information .video-container .view-container {
+    bottom: 0px;
+  }
+  .more-information .right-side-information .inf-container {
+    font-size: 20px;
+    padding: 22px 0;
+    margin: 10px 0;
+  }
+  .more-information .right-side-information .inf-container p {
+    padding: 2px 0;
+    font-size: 24px;
+  }
+  .more-information .right-side-information .wrapper,
+  .more-information .left-side-information .wrapper {
+    padding: 0;
+  }
+  .more-information .left-side-information .wrapper .inf-top {
+    font-size: 22px;
+  }
+  .more-information .left-side-information .wrapper .inf-top p {
+    font-size: 26px;
+    font-family: peyda-bold;
+  }
+  .more-information .left-side-information .wrapper .inf-top {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .more-information .left-side-information .wrapper .inf-bottom p {
+    font-size: 29px;
+  }
+  .more-information
+    .left-side-information
+    .wrapper
+    .inf-bottom
+    p:first-of-type {
+    font-size: 32px;
+  }
+  .more-information .left-side-information .wrapper .inf-bottom svg {
+    width: 115px;
+    height: 115px;
+  }
+  .more-information .video-container .view-container span {
+    font-size: 22px;
+  }
+  .more-information .video-container .view-container a {
+    font-size: 22px;
+  }
+  .more-information .view-container::before {
+    bottom: 43px;
+  }
+  .more-information .left-side-information .wrapper .inf-bottom {
+    margin: 10px 0;
+  }
 }
 @media (min-width: 992px) {
+  .chart-container {
+    padding: 45px 15px;
+    position: relative;
+}
   nav.small-responsive {
     display: none;
   }
@@ -1591,7 +1789,7 @@ footer .samandehi-2 {
     padding: 10px 10px 0 10px;
   }
   .collapse-item {
-    margin: 0 0px;
+    margin: 0 10px;
   }
 
   .more-information .left-side-information .wrapper .inf-bottom {
@@ -1631,9 +1829,6 @@ footer .samandehi-2 {
     flex-direction: column-reverse;
     margin-bottom: 15px;
   }
-  footer .main-section .contact .header {
-    flex-wrap: wrap;
-  }
   footer .main-section .contact .header li {
     padding: 4px 10px;
   }
@@ -1658,17 +1853,7 @@ footer .samandehi-2 {
     height: 60px;
   }
 
-  .more-information .left-side-information {
-    width: 50%;
-  }
-  .more-information .right-side-information {
-    width: 50%;
-  }
-
   .more-information .video-container .video {
-    height: 310px;
-  }
-  .more-information .right-side-information img {
     height: 310px;
   }
   .more-information .left-side-information .wrapper .inf-bottom p {
@@ -1695,10 +1880,7 @@ footer .samandehi-2 {
     border-top-left-radius: 20px;
     padding: 10px 0px 0px 16px;
   }
-  .more-information .video-container::after {
-    bottom: 0;
-    right: 275px;
-  }
+
   .more-information .video-container::before {
     right: 0px;
     bottom: 33px;
@@ -1714,16 +1896,45 @@ footer .samandehi-2 {
   }
   header nav {
     margin-top: 35px;
-}
-.about-us-container , .contact-us-container{
-  margin-top: 50px;
-}
-footer .main-section .contact .header {
-  padding: 10px 0px;
-}
-footer {
-  margin-bottom: 50px;
-}
+  }
+  .about-us-container,
+  .contact-us-container {
+    margin-top: 50px;
+  }
+  footer .main-section .contact .header {
+    padding: 10px 0px;
+  }
+  footer {
+    margin-bottom: 50px;
+  }
+  footer .contact {
+    display: flex;
+  }
+  footer .main-section .contact .header {
+    width: 35%;
+    flex-direction: column;
+  }
+  footer .main-section .contact .footer .telephone {
+    flex-direction: row-reverse;
+  }
+  footer .main-section .contact .footer .location .text {
+    text-align: justify;
+    font-weight: 100;
+    width: 195px;
+    padding-right: 15px;
+  }
+  footer .main-section .contact .footer .telephone .number pre {
+    font-size: 18px;
+  }
+  footer .main-section .contact .header {
+    border-bottom: 0;
+  }
+  footer .main-section {
+    border: 0;
+  }
+  footer .contact {
+    justify-content: center;
+  }
 }
 @media (max-width: 576px) {
   .chart-container .right-side p {
@@ -1734,7 +1945,7 @@ footer {
     padding-top: 10px;
   }
   .more-information .right-side-information img {
-    height: 220px;
+    height: 365px;
   }
   .more-information .left-side-information .wrapper .inf-bottom p {
     font-size: 17.5px;
@@ -1757,13 +1968,9 @@ footer {
   .more-information .left-side-information .wrapper .inf-top {
     font-size: 14px;
   }
-  .more-information .video-container::before {
-    right: 13px;
-    bottom: 47px;
-  }
-  .more-information .video-container::after {
-    right: 288px;
-    bottom: 13px;
+
+  .more-information .view-container::before {
+    right: 14.8px;
   }
   .more-information .video-container .view-container {
     border-top-left-radius: 20px;
@@ -1777,9 +1984,124 @@ footer {
   .more-information .left-side-information .wrapper .inf-top {
     padding: 14px 30px;
   }
-  nav.small-responsive .logo a {
-    padding-right: 10px;
+  footer .copyright-container {
+    display: none;
   }
+  .bottom-line {
+    display: none;
+  }
+  footer {
+    margin-bottom: -30px;
+    padding-bottom: 10px;
+  }
+  footer .enamad .copyright-responsive {
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    background: green;
+    text-align: justify;
+    width: 38%;
+    font-size: 15px;
+}
+  footer .enamad {
+    justify-content: start;
+  }
+  footer .logo-section h2 {
+    text-align: right;
+  }
+  footer .container-fluid {
+    padding: 0;
+  }
+  footer .container-fluid .container {
+    padding: 0;
+  }
+  footer .main-section .contact .header li {
+    padding: 4px 0;
+  }
+  footer .contact {
+    justify-content: space-between;
+    padding: 0 25px;
+    margin: 0;
+  }
+  footer .text-section {
+    padding: 0 25px;
+  }
+  footer .logo-section {
+    padding: 0 25px;
+  }
+  footer .enamad {
+    justify-content: space-between;
+    display: flex;
+    padding: 0;
+  }
+  footer .enamad .copyright-responsive {
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: var(--light-green-color);
+  }
+  footer .back-to-top-section .scroll-to-top button {
+    display: none !important;
+  }
+  footer .back-to-top-section .scroll-to-top-responsive button {
+    background-color: var(--light-white-color);
+    margin-right: 13px;
+    padding: 5px;
+    border-radius: 50%;
+    display: block;
+  }
+  footer .back-to-top-section .scroll-to-top-responsive button svg {
+    width: 35px;
+    height: 35px;
+    transform: rotate(180deg);
+  }
+  footer .back-to-top-section .scroll-to-top-responsive button::before {
+    position: absolute;
+    height: 13px;
+    z-index: 300;
+    width: 12px;
+    content: "";
+    left: -10px;
+    border-bottom-right-radius: 118px;
+    top: 6px;
+    box-shadow: 2px 5px 1px var(--light-white-color);
+    border: 0;
+  }
+  footer .back-to-top-section .scroll-to-top-responsive button::after {
+    position: absolute;
+    height: 13px;
+    z-index: 300;
+    width: 12px;
+    content: "";
+    right: -10px;
+    border-bottom-left-radius: 118px;
+    top: 6px;
+    box-shadow: -2px 5px 1px var(--light-white-color);
+    border: 0;
+  }
+  footer .back-to-top-section {
+    justify-content: start;
+  }
+  footer .back-to-top-section .scroll-to-top::after,
+  footer .back-to-top-section .scroll-to-top::before {
+    display: none;
+  }
+  footer .main-section .contact .footer {
+    width: 70%;
+  }
+
+  .more-information .video-container .view-container small,
+  .more-information .video-container .view-container span,
+  .more-information .video-container .view-container a {
+    font-size: 16px;
+  }
+
+  .more-information .view-container::before {
+    bottom: 34px;
+  }
+  .more-information .right-side-information .wrapper, .more-information .left-side-information .wrapper {
+    padding: 0 15px;
+}
 }
 @media (max-width: 400px) {
   .chart-container .right-side h3 {
@@ -1791,3 +2113,12 @@ footer {
 }
 
 /**************** end responsive ****************/
+
+
+
+
+
+
+
+
+
