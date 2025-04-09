@@ -1460,7 +1460,6 @@ footer .copyright-container p {
   background: var(--background-color);
   border: 2px solid var(--light-white-color);
   color: var(--normal-text-color);
-  cursor: pointer;
 }
 footer .copyright-container .copyright-section {
   position: relative;
