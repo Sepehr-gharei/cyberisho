@@ -913,6 +913,7 @@ header .sidebar ul li a:hover {
 .about-us-container .breadcrumb,
 .contact-us-container .breadcrumb {
   align-items: center;
+  margin-bottom: 25px;
 }
 .about-us-container .breadcrumb .breadcrumb-page,
 .contact-us-container .breadcrumb .breadcrumb-page {
