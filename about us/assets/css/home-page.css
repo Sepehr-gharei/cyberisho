@@ -1,0 +1,627 @@
+.header-information {
+  margin: 40px 0 100px 0;
+}
+.header-information .header-information-container {
+  position: relative;
+  background-color: #f6f4ff;
+  padding: 0;
+  height: 285px;
+  border-radius: 15px;
+}
+.header-information .header-information-container .city-bg {
+  position: absolute;
+  bottom: 0;
+  border-radius: 15px;
+}
+.header-information .header-information-container .wrapper {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 10px;
+}
+.header-information .header-information-container .wrapper img {
+  padding: 0;
+  width: 200px;
+  top: 35px;
+  padding: 0;
+  position: absolute;
+  right: 5%;
+}
+.header-information .header-information-container .wrapper .text-field {
+  width: 400px;
+  transform: translate(-50%, -50%);
+  top: 115px;
+  left: 40%;
+  position: absolute;
+}
+.header-information .header-information-container .wrapper .text-field strong {
+  font-weight: 100;
+  display: block;
+  width: 255px;
+}
+.header-information .header-information-container .wrapper .text-field a {
+  color: var(--dark-blue-text-color);
+
+  display: block;
+  padding: 25px 35px 0;
+}
+.about-us-section .video-container {
+  position: relative;
+  width: 60%;
+}
+
+.about-us-section .video-container .video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 370px;
+  border-radius: 20px;
+}
+
+.about-us-section .view-container::after {
+  background: inherit;
+  margin-top: -24px;
+  border-bottom-right-radius: 22px;
+  width: 26px;
+  left: -25.16px;
+  bottom: 0px;
+  height: 26px;
+  box-shadow: 7px 7px 0 #ffffff;
+  position: absolute;
+  background-color: transparent;
+  content: "";
+}
+.about-us-section .view-container::before {
+  background: inherit;
+  margin-top: -24px;
+  border-bottom-right-radius: 22px;
+  width: 26px;
+  right: 0;
+  bottom: 34px;
+  height: 26px;
+  box-shadow: 7px 7px 0 #ffffff;
+  position: absolute;
+  content: "";
+  background-color: transparent;
+}
+
+.about-us-section .video-container .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: rgba(141, 134, 134, 0.55);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 15px rgba(141, 134, 134, 0.301);
+  transition: all 0.3s ease;
+}
+.about-us-section .video-container:hover .play-button {
+  box-shadow: 0px 0px 0px 22px rgba(141, 134, 134, 0.301);
+}
+
+.about-us-section .video-container .play-button svg use {
+  fill: #ffffff;
+}
+.about-us-section .video-container svg {
+  width: 65px;
+  height: 35px;
+  margin-left: 5px;
+}
+
+/* مخفی کردن دکمه وقتی ویدیو شروع شد */
+.about-us-section .video-container .video.playing + .play-button {
+  opacity: 0;
+  pointer-events: none;
+}
+.about-us-section .video-container .view-container {
+  border-top-left-radius: 20px;
+  padding: 10px 0px 0px 16px;
+  background: white;
+  position: absolute;
+  color: var(--normal-text-color);
+  bottom: -1px;
+  right: -1px;
+}
+.about-us-section .video-container .view-container a {
+  color: var(--dark-blue-text-color);
+  font-family: peyda-bold;
+}
+.about-us-section .video-container .view-container small {
+  padding: 0 5px;
+  font-size: 16px;
+
+  color: var(--normal-text-color);
+}
+.about-us-section .video-container .view-container span {
+  font-family: peyda-bold;
+}
+.about-us-section .about-us-text-field {
+  width: 40%;
+  padding: 0 45px 0 0;
+}
+.about-us-section .about-us-text-field h2 {
+  font-family: peyda-bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.about-us-section .about-us-text-field p {
+  color: var(--normal-text-color);
+  text-align: justify;
+}
+.about-us-section {
+  margin: 100px 0;
+}
+.about-us-section .about-us-text-field .about-us-redirect {
+  margin-top: 40px;
+}
+.about-us-section .about-us-text-field .about-us-redirect a {
+  padding: 5px 30px;
+  background-color: var(--light-blue-color);
+  border-radius: 20px;
+  color: var(--dark-blue-text-color);
+}
+.meeting-section .container-fluid {
+  padding: 0;
+  margin: 0;
+  padding-right: 100px;
+}
+.meeting-section .container-fluid .row {
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+.meeting-section {
+  margin: 100px 0;
+}
+.meeting-section .form-container {
+  display: flex;
+  border-radius: 15px;
+  background: var(--light-white-color);
+  flex-direction: column;
+  padding: 40px;
+  width: 30%;
+}
+.meeting-section .form-container h3 {
+  margin-bottom: 10px;
+  font-family: peyda-bold;
+}
+.meeting-section .form-container input {
+  margin: 4px 0;
+  border-radius: 50px;
+  padding: 15px 5px;
+  outline: unset;
+  border: unset;
+  font-size: 15px;
+}
+.meeting-section .form-container .submit {
+  font-size: 16px;
+  color: var(--light-white-text);
+  background: var(--dark-blue-color);
+  margin-top: 10px;
+  font-family: peyda-bold;
+}
+.meeting-section .text-field {
+  width: 65%;
+  padding: 40px 40px 40px 140px;
+  background: var(--light-white-color);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.meeting-section .text-field h3 {
+  margin-bottom: 10px;
+  font-family: peyda-bold;
+}
+.meeting-section .text-field p {
+  margin: 3px 0;
+  color: var(--normal-text-color);
+  text-align: justify;
+}
+.contact-data .right-side .icon {
+  position: relative;
+}
+.contact-data .text-field h3 {
+  font-size: 28px;
+  font-family: peyda-bold;
+}
+.contact-data .text-field p {
+  font-size: 18px;
+}
+.contact-data .right-side .icon svg {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  border-radius: 140px;
+  background: var(--light-green-color);
+}
+.contact-data .contact-section {
+  display: flex;
+  justify-content: end;
+}
+.contact-data .contact-section strong {
+  font-family: peyda-bold;
+  font-size: 24px;
+}
+.contact-data .contact-section p {
+  font-size: 23px;
+}
+.contact-data .contact-section .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  direction: ltr;
+}
+
+.contact-data .contact-section svg {
+  width: 75px;
+  height: 75px;
+  margin-right: 20px;
+}
+.contact-data {
+  margin: -30px 0 100px 0;
+}
+.contact-data .contact-data-container {
+  border-radius: 20px;
+  padding: 38px 110px;
+  background: var(--light-green-color);
+}
+
+.our-services {
+  background-color: var(--light-white-color);
+}
+.our-services .header {
+  display: flex;
+  justify-content: center;
+}
+.our-services .header h2 {
+  margin-top: -40px;
+  padding: 15px 43px;
+  background: var(--background-color);
+  border-radius: 50px;
+  position: relative;
+}
+.our-services .header h2::before {
+  position: absolute;
+  border-top-left-radius: 100px;
+  width: 31px;
+  right: -29px;
+  transform: rotate(23deg);
+  bottom: 11.5px;
+  height: 14.5px;
+  box-shadow: -15px -1px 0 0px var(--background-color);
+  content: "";
+}
+.our-services .header h2::after {
+  position: absolute;
+  border-top-right-radius: 100px;
+  width: 31px;
+  left: -29px;
+  transform: rotate(337deg);
+  bottom: 11.5px;
+  height: 14.5px;
+  box-shadow: 15px -1px 0 0px var(--background-color);
+  content: "";
+}
+.our-services section {
+  display: flex;
+}
+.our-services section svg {
+  width: 125px;
+  height: 125px;
+}
+.our-services section .wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 85px;
+}
+.our-services section .wrapper p {
+  margin: auto;
+  width: 260px;
+}
+.our-services section .wrapper strong {
+  margin: 5px 0 10px 0;
+  font-size: 26px;
+}
+.about-cyberisho {
+  background-color: var(--light-blue-color);
+}
+.about-cyberisho .header {
+  display: flex;
+  justify-self: center;
+}
+.about-cyberisho .header h2 {
+  margin-top: -40px;
+  padding: 15px 43px;
+  background: var(--light-white-color);
+  border-radius: 50px;
+  position: relative;
+}
+.about-cyberisho .header h2::before {
+  position: absolute;
+  border-top-left-radius: 100px;
+  width: 31px;
+  right: -29px;
+  transform: rotate(23deg);
+  bottom: 11.5px;
+  height: 14.5px;
+  box-shadow: -15px -1px 0 0 var(--light-white-color);
+  content: "";
+}
+.about-cyberisho .header h2::after {
+  position: absolute;
+  border-top-right-radius: 100px;
+  width: 31px;
+  left: -29px;
+  transform: rotate(337deg);
+  bottom: 11.5px;
+  height: 14.5px;
+  box-shadow: 15px -1px 0 0px var(--light-white-color);
+  content: "";
+}
+.about-cyberisho section .item {
+  padding: 10px 0;
+  display: flex;
+  margin: 40px 0 80px 0;
+}
+.about-cyberisho section .item:first-child {
+  justify-content: start;
+}
+.about-cyberisho section .item {
+  justify-content: center;
+  border-bottom: 3px solid var(--background-color);
+}
+.about-cyberisho section .item:last-child {
+  justify-content: end;
+}
+.about-cyberisho section .item strong {
+  margin-bottom: -38px;
+  background-color: var(--background-color);
+  border-radius: 50px;
+  display: flex;
+  color: var(--dark-blue-text-color);
+  position: relative;
+}
+.about-cyberisho section .item strong::after {
+  transform: rotate(242deg);
+  position: absolute;
+  box-shadow: 1px -9px 0px -2px var(--background-color);
+  height: 34px;
+  width: 24px;
+  content: "";
+  right: -29px;
+  border-top-left-radius: 21px;
+  top: -1px;
+}
+.about-cyberisho section .item strong::before {
+  transform: rotate(118deg);
+  position: absolute;
+  box-shadow: 1px 9px 0px -2px var(--background-color);
+  height: 34px;
+  width: 24px;
+  content: "";
+  right: -29px;
+  border-bottom-left-radius: 21px;
+  top: 22px;
+}
+
+.about-cyberisho section .item:first-child strong::after {
+  display: none;
+}
+.about-cyberisho section .item:first-child strong::before {
+  display: none;
+}
+.about-cyberisho section .item strong span {
+  padding: 15px 20px;
+}
+.about-cyberisho section .item strong span::before {
+  transform: rotate(118deg);
+  position: absolute;
+  box-shadow: -1px -9px 0px -2px var(--background-color);
+  height: 34px;
+  width: 24px;
+  content: "";
+  left: -29px;
+  border-top-right-radius: 21px;
+  top: -1px;
+}
+.about-cyberisho section .item strong span::after {
+  transform: rotate(242deg);
+  position: absolute;
+  box-shadow: -1px 9px 0px -2px var(--background-color);
+  height: 34px;
+  width: 24px;
+  content: "";
+  left: -28px;
+  border-bottom-right-radius: 21px;
+  top: 23px;
+}
+
+.about-cyberisho section .item:last-child strong span::after {
+  display: none;
+}
+.about-cyberisho section .item:last-child strong span::before {
+  display: none;
+}
+
+.comment-and-brands {
+  background-color: var(--light-white-color);
+  margin-bottom: 100px;
+  padding: 85px 0;
+}
+.comment-and-brands .brands-container .brands {
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.comment-and-brands .brands-container .brands .item {
+  padding: 10px;
+}
+.comment-and-brands .brands-container .brands .item .image-container {
+  background-color: var(--background-color);
+  padding: 20px 25px;
+  border-radius: 50%;
+}
+.comment-and-brands .brands-container h2 {
+  font-size: 28px;
+}
+.comment-and-brands .brands-container p {
+  color: var(--normal-text-color);
+}
+.comment-and-brands .brands-container .bott-text {
+  margin-top: 20px;
+}
+.comment-and-brands .brands-container .bott-text a {
+  color: var(--dark-blue-text-color);
+}
+.comment-and-brands .comment {
+  padding: 0 65px;
+}
+.comment-and-brands .comment section {
+  border-radius: 20px;
+  background: var(--background-color);
+}
+.comment-and-brands .comment section .header .profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.comment-and-brands .comment section .header {
+  display: flex;
+  background-color: var(--dark-blue-color);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 20px 10px;
+  color: var(--light-white-text);
+}
+.comment-and-brands .comment section .header .profile {
+  position: relative;
+}
+.comment-and-brands .comment section .header .profile::after {
+  position: absolute;
+  width: 7.2px;
+  height: 7px;
+  border-radius: 50%;
+  content: "";
+  top: 3px;
+  left: 3px;
+  background-color: var(--light-green-color);
+  border: 1px solid var(--dark-blue-color);
+}
+.comment-and-brands .comment section .header .profile-text {
+  padding-right: 15px;
+}
+.comment-and-brands .comment section .header .profile-text small {
+  color: var(--light-green-color);
+}
+.comment-and-brands .comment section .body {
+  padding: 0 15px;
+}
+.comment-and-brands .comment section .body .comment-item .profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.comment-and-brands .comment section .body {
+  display: flex;
+  flex-direction: column; /* معکوس کردن ترتیب آیتم‌ها */
+  height: 300px; /* ارتفاع محدود */
+  overflow-y: scroll; /* فعال کردن اسکرول عمودی */
+}
+
+.comment-and-brands .comment section .items {
+  display: flex;
+  flex-direction: column-reverse; /* معکوس کردن ترتیب آیتم‌ها */
+  height: 100%; /* ارتفاع کامل body */
+  overflow-y: scroll; /* فعال کردن اسکرول عمودی */
+  scrollbar-width: thin; /* ظاهر اسکرول را نازک‌تر کنید (اختیاری) */
+}
+
+.comment-and-brands .comment section .comment-item {
+  display: flex;
+  align-items: flex-start; /* هم‌ترازی آیتم‌ها */
+  margin-bottom: 16px; /* فاصله بین آیتم‌ها */
+}
+
+.comment-and-brands .comment section .profile img {
+  width: 40px; /* اندازه تصویر پروفایل */
+  height: 40px;
+  border-radius: 50%; /* شکل دایره‌ای برای تصویر */
+  margin-left: 8px;
+}
+
+.comment-and-brands .comment section .text-field {
+  margin-right: 8px; /* فاصله بین تصویر و متن */
+  padding: 10px;
+  background-color: var(--light-white-color);
+  line-height: 1.4rem;
+  border-radius: 15px;
+}
+
+.comment-and-brands .comment section .text-field h6 {
+  font-size: 14px; /* اندازه عنوان */
+  margin: 0;
+}
+
+.comment-and-brands .comment section .text-field p {
+  font-size: 12px; /* اندازه متن */
+  margin: 4px 0 0;
+}
+.comment-and-brands .comment section .items::-webkit-scrollbar {
+  width: 8px; /* پهنای اسکرول */
+}
+
+.comment-and-brands .comment section .items::-webkit-scrollbar-track {
+  background: var(--light-white-color); /* رنگ پس‌زمینه اسکرول */
+  border-radius: 10px; /* گرد کردن لبه‌ها */
+}
+
+.comment-and-brands .comment section .items::-webkit-scrollbar-thumb {
+  background: var(--light-white-color); /* رنگ پس‌زمینه اسکرول */
+
+  border-radius: 10px; /* گرد کردن لبه‌ها */
+}
+
+.comment-and-brands .comment section .items::-webkit-scrollbar-thumb:hover {
+  background: var(--light-white-color); /* رنگ پس‌زمینه اسکرول */
+}
+
+.comment-and-brands .comment section .footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+  padding: 10px;
+  border-top: 2px solid var(--light-white-color);
+}
+.comment-and-brands .comment section .footer .icon svg {
+  width: 18px;
+  height: 18px;
+}
+.comment-and-brands .comment section .footer input {
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+  width: 80%;
+  outline: none;
+}
+.comment-and-brands .comment section .footer button {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  background: #e9e0fc;
+}
+.comment-and-brands .comment section .footer .icon {
+  background-color: #7440e9;
+  padding: 8px 10px 3px 8px;
+  border-radius: 50%;
+  border: 2px solid var(--background-color);
+}
