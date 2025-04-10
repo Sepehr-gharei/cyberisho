@@ -611,6 +611,7 @@
   border: none;
   width: 80%;
   outline: none;
+  font-size: 16px;
 }
 .comment-and-brands .comment section .footer button {
   outline: none;
