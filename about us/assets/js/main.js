@@ -2,7 +2,7 @@
 // about us 
 // collapse 
 // back to top 
-
+// accordion item
 // ********************************  about us text ******************************** 
 $(document).ready(function () {
   // متن اصلی و دکمه را انتخاب کنید
@@ -143,3 +143,28 @@ document.addEventListener('DOMContentLoaded', function() {
       node.textContent = node.textContent.replace(/\d+/g, num => toPersianNum(num));
   }
 });
+// accordion item
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".accordion-item");
+
+  items.forEach(item => {
+    const header = item.querySelector(".accordion-header");
+    const content = item.querySelector(".accordion-content");
+
+    header.addEventListener("click", () => {
+      // Check if the current item is active
+      const isActive = item.classList.contains("active");
+
+      // Close all other items
+      items.forEach(i => i.classList.remove("active"));
+
+      // Open the clicked item if it's not active
+      if (!isActive) {
+        item.classList.add("active");
+      }
+    });
+  });
+});
+
+
+

@@ -18,6 +18,7 @@
   --light-blue-color: #e7e2ff;
   --light-white-color: #f6f4ff;
   --light-white-text: #fefffd;
+  --light-white-border-color: #d9d9d9;
   --light-shadow-white-color: #e6e6e6;
   --light-shadow-black-color: #151515;
   --normal-text-color: #6a6a6a;
@@ -49,6 +50,7 @@
 body {
   margin: 0;
   background-color: var(--background-color);
+  color: var(--text-color);
 }
 ul,
 li {
