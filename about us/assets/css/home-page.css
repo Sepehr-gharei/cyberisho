@@ -1,3 +1,16 @@
+/*************** hashtags ****************/
+/*************** header information ****************/
+/*************** about us ****************/
+/*************** metting section ****************/
+/*************** contact data ****************/
+/*************** our services ****************/
+/*************** about cyberisho ****************/
+/*************** comment and brands ****************/
+/*************** accordion fag ****************/
+/*************** article slider ****************/
+/**************** responsive ****************/
+
+/***************  start header information ****************/
 .header-information {
   margin: 40px 0 100px 0;
 }
@@ -41,10 +54,11 @@
 }
 .header-information .header-information-container .wrapper .text-field a {
   color: var(--dark-blue-text-color);
-
   display: block;
   padding: 25px 35px 0;
 }
+/***************  end header information ****************/
+/***************  start about us****************/
 .about-us-section .video-container {
   position: relative;
   width: 60%;
@@ -166,6 +180,9 @@
   border-radius: 20px;
   color: var(--dark-blue-text-color);
 }
+/***************  end about us****************/
+/*************** start metting section ****************/
+
 .meeting-section .container-fluid {
   padding: 0;
   margin: 0;
@@ -222,6 +239,9 @@
   color: var(--normal-text-color);
   text-align: justify;
 }
+/*************** end metting section ****************/
+/*************** start contact data ****************/
+
 .contact-data .right-side .icon {
   position: relative;
 }
@@ -273,6 +293,8 @@
   padding: 38px 110px;
   background: var(--light-green-color);
 }
+/*************** end contact data ****************/
+/*************** start our services ****************/
 
 .our-services {
   background-color: var(--light-white-color);
@@ -331,6 +353,9 @@
   margin: 5px 0 10px 0;
   font-size: 26px;
 }
+/*************** end our services ****************/
+/*************** start about cyberisho ****************/
+
 .about-cyberisho {
   background-color: var(--light-blue-color);
 }
@@ -338,6 +363,7 @@
   display: flex;
   justify-self: center;
 }
+
 .about-cyberisho .header h2 {
   margin-top: -40px;
   padding: 15px 43px;
@@ -451,6 +477,8 @@
 .about-cyberisho section .item:last-child strong span::before {
   display: none;
 }
+/*************** end about cyberisho ****************/
+/*************** start comment and brands ****************/
 
 .comment-and-brands {
   background-color: var(--light-white-color);
@@ -463,6 +491,7 @@
 }
 .comment-and-brands .brands-container .brands .item {
   padding: 10px;
+  width: 14%;
 }
 .comment-and-brands .brands-container .brands .item .image-container {
   background-color: var(--background-color);
@@ -487,6 +516,7 @@
 .comment-and-brands .comment section {
   border-radius: 20px;
   background: var(--background-color);
+  box-shadow: 0px 0px 12px 10px var(--light-shadow-white-color);
 }
 .comment-and-brands .comment section .header .profile img {
   border-radius: 50%;
@@ -579,14 +609,16 @@
 }
 .comment-and-brands .comment section .body::-webkit-scrollbar {
   width: 8px; /* پهنای اسکرول */
+  cursor: grab;
 }
 .comment-and-brands .comment section .body::-webkit-scrollbar-track {
   border-radius: 10px; /* گرد کردن لبه‌ها */
   background: var(--background-color); /* رنگ پس‌زمینه اسکرول */
+  cursor: grab;
 }
 .comment-and-brands .comment section .body::-webkit-scrollbar-thumb {
   background: var(--light-blue-color); /* رنگ پس‌زمینه اسکرول */
-
+  cursor: grab;
   border-radius: 10px; /* گرد کردن لبه‌ها */
 }
 .comment-and-brands .comment section .footer {
@@ -621,6 +653,8 @@
   border-radius: 50%;
   border: 2px solid var(--background-color);
 }
+/*************** end comment and brands ****************/
+/*************** start accordion fag ****************/
 
 .accordion-fag {
   margin: 100px 0;
@@ -824,6 +858,9 @@
   max-height: 99999px; /* Adjust based on content */
   padding: 0 15px;
 }
+/*************** end accordion fag ****************/
+/*************** start article slider ****************/
+
 .article-slider {
   margin: 100px 0 150px 0;
 }
@@ -1390,3 +1427,313 @@
   margin: 0;
   padding: 0;
 }
+/*************** end article slider ****************/
+/**************** start responsive ****************/
+@media (min-width: 1400px) {
+  .meeting-section .container-fluid {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+  }
+  .meeting-section .container-fluid .row {
+    max-width: 1320px;
+  }
+  .meeting-section .text-field {
+    border-radius: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .about-us-section .video-container .video {
+    height: 335px;
+  }
+  .comment-and-brands .comment {
+    padding: 0;
+  }
+  .comment-and-brands .comment section .body {
+    margin: 5px;
+  }
+  .comment-and-brands .brands-container .brands .item .image-container {
+    padding: 10px 15px;
+  }
+  .comment-and-brands .comment section .header {
+    padding: 15px 10px;
+  }
+  .article-slider .container-article-slider .swiper-slide {
+    height: 150px;
+  }
+  .article-slider .container-article-slider .swiper-slide .text-field {
+    font-size: 14px;
+  }
+  .article-slider .container-article-slider .panorama-slider {
+    padding: 0;
+  }
+  .article-slider {
+    margin: 100px 0;
+  }
+  .article-slider .title-container {
+    margin-bottom: 20px;
+  }
+  .contact-data .contact-data-container {
+    padding: 38px;
+  }
+}
+@media (max-width: 992px) {
+  .about-cyberisho .about-cyberisho-container {
+    flex-wrap: wrap;
+  }
+  .about-cyberisho section .item:nth-child(2) {
+    justify-content: end;
+  }
+  .about-cyberisho section .item:nth-child(2) strong span::after {
+    display: none;
+  }
+  .about-cyberisho section .item:nth-child(2) strong span::before {
+    display: none;
+  }
+  .about-cyberisho section .item:nth-child(3) {
+    justify-content: start;
+  }
+  .about-cyberisho section .item:nth-child(3) strong::before {
+    display: none;
+  }
+  .about-cyberisho section .item:nth-child(3) strong::after {
+    display: none;
+  }
+  .comment-and-brands .brands-container {
+    margin-bottom: 50px;
+  }
+  .comment-and-brands .comment {
+    padding: 0 200px;
+  }
+  .contact-data .right-side .icon svg {
+    transform: unset;
+    top: unset;
+    left: unset;
+    height: auto;
+    width: 100px;
+    position: unset;
+    border-radius: unset;
+    background: unset;
+  }
+  .contact-data .right-side .text-field {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-data .contact-section {
+    justify-content: start;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+  }
+  .contact-data .contact-section svg {
+    margin-right: 0;
+  }
+  .contact-data .contact-section svg {
+    width: 100px;
+    height: 85px;
+  }
+  .contact-data .contact-section .text {
+    margin-right: 115px;
+  }
+  .header-information .header-information-container .wrapper .text-field {
+    left: 35%;
+  }
+  .about-us-section .video-container {
+    width: 100%;
+  }
+  .about-us-section .about-us-text-field {
+    width: 100%;
+  }
+  .about-us-section .about-us-text-field {
+    padding: 0;
+    margin-top: 35px;
+  }
+  .meeting-section .form-container {
+    width: 100%;
+  }
+  .meeting-section .text-field {
+    width: 100%;
+  }
+  .meeting-section .container-fluid {
+    padding-right: 0;
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .meeting-section .container-fluid .row {
+    flex-direction: column-reverse;
+  }
+  .meeting-section .text-field {
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+  }
+  .meeting-section .form-container input {
+    margin: 12px 0;
+  }
+  .meeting-section .form-container .submit {
+    margin-top: 20px;
+  }
+  .about-us-section .video-container .view-container span,
+  .about-us-section .video-container .view-container small,
+  .about-us-section .video-container .view-container a {
+    font-size: 22px;
+  }
+  .about-us-section {
+    margin-bottom: 70px;
+  }
+  .meeting-section {
+    margin-top: 70px;
+  }
+  .comment-and-brands .brands-container .brands .item {
+    padding: 6px;
+  }
+  .article-slider .container-article-slider .swiper-slide .text-field {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-information .header-information-container .wrapper .text-field {
+    top: 315px;
+  }
+  .header-information .header-information-container {
+    height: 455px;
+  }
+  .header-information .header-information-container .wrapper img {
+    width: 170px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    right: unset;
+  }
+  .about-us-section .video-container .video {
+    height: 265px;
+  }
+  .about-us-section .video-container .view-container span,
+  .about-us-section .video-container .view-container small,
+  .about-us-section .video-container .view-container a {
+    font-size: 16px;
+  }
+  .contact-data .contact-section .text {
+    margin-right: 50px;
+  }
+  .our-services section {
+    margin-top: 30px;
+  }
+  .comment-and-brands .comment {
+    padding: 0px 100px;
+  }
+  .comment-and-brands .brands-container .brands .item .image-container {
+    padding: 3px 10px;
+  }
+  .meeting-section .container-fluid {
+    max-width: 540px;
+  }
+  .article-slider .container-article-slider .swiper-slide .text-field {
+    font-size: 11px;
+  }
+  .header-information .header-information-container .wrapper .text-field {
+    left: 40%;
+  }
+}
+@media (max-width: 576px) {
+  .about-us-section {
+    padding: 0 15px;
+  }
+  .about-us-section .video-container .video {
+    height: 195px;
+  }
+  .about-us-section .video-container .view-container span,
+  .about-us-section .video-container .view-container small,
+  .about-us-section .video-container .view-container a {
+    font-size: 14px;
+  }
+  .our-services section {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-data {
+    padding: 0 10px;
+  }
+  .comment-and-brands .comment {
+    padding: 0 10px;
+  }
+  @media (max-width: 576px) {
+    .comment-and-brands .brands-container .brands {
+      display: grid;
+      grid-template-rows: repeat(3, 80px);
+      grid-auto-flow: column;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px;
+      width: 100%;
+    }
+    .comment-and-brands .brands-container .brands .item {
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      scroll-snap-align: start;
+    }
+    .comment-and-brands .brands-container .brands .item .image-container {
+      padding: 15px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .comment-and-brands .brands-container .brands .item .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .comment-and-brands .brands-container .brands::-webkit-scrollbar {
+      height: 8px;
+    }
+    .comment-and-brands .brands-container .brands::-webkit-scrollbar-track {
+      background: var(--background-color);
+      border-radius: 10px;
+    }
+    .comment-and-brands .brands-container .brands::-webkit-scrollbar-thumb {
+      background: var(--light-blue-color);
+      border-radius: 10px;
+    }
+  }
+  .header-information .header-information-container .wrapper .text-field {
+    width: 315px;
+    left: 48%;
+  }
+  .about-cyberisho .header h2 {
+    padding: 15px 10px;
+  }
+  .contact-data .contact-data-container {
+    padding: 25px;
+  }
+  .contact-data .contact-data-container .right-side {
+    padding: 0;
+  }
+  .contact-data .text-field h3 {
+    font-size: 26px;
+  }
+  .contact-data .text-field p {
+    font-size: 16px;
+  }
+  .contact-data .contact-section p {
+    font-size: 21.5px;
+  }
+  .contact-data .contact-section strong {
+    font-size: 22px;
+  }
+  .contact-data .contact-section {
+    padding: 0;
+  }
+  .contact-data .contact-section .text {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 400px) {
+}
+/**************** end responsive ****************/
