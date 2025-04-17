@@ -393,6 +393,10 @@
   strong {
   font-size: 20px;
 }
+.metting-and-content-table-section {
+  position: relative;
+  z-index: 100;
+}
 .metting-and-content-table-section .wrapper {
   border-radius: 20px;
   border: 1px solid var(--light-white-border-color);
@@ -960,3 +964,4 @@ webdesing-text-field-section {
   text-align: justify;
   margin: 30px 0;
 }
+
