@@ -15,6 +15,7 @@
   --dark-blue-color: #2b00c6;
   --dark-blue-text-color: #2800c4;
   --light-blue-text-color: #9581e6;
+  --medium-blue-color : #5533d0 ;
   --light-blue-color: #e7e2ff;
   --light-white-color: #f6f4ff;
   --light-white-text: #fefffd;
@@ -1301,6 +1302,7 @@ header .sidebar ul li a:hover {
 footer {
   background-color: var(--light-white-color);
   margin-bottom: 85px;
+  margin-top: 85px;
 }
 footer .back-to-top-section {
   justify-content: center;
@@ -2114,12 +2116,3 @@ footer .samandehi-2 {
 }
 
 /**************** end responsive ****************/
-
-
-
-
-
-
-
-
-
