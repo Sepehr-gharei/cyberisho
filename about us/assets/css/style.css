@@ -1796,6 +1796,7 @@ footer .samandehi-2 {
   nav.small-responsive {
     display: none;
   }
+  
 }
 @media (max-width: 768px) {
   .collapse-item {
@@ -1948,6 +1949,7 @@ footer .samandehi-2 {
   footer .contact {
     justify-content: center;
   }
+
 }
 @media (max-width: 576px) {
   .chart-container .right-side p {
@@ -2133,53 +2135,65 @@ footer .samandehi-2 {
 .animated-section-top,
 .animated-section-bottom-slow,
 .animated-section {
-    opacity: 0;
-    transform: translateX(0); /* پیش‌فرض برای حرکت افقی */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(0); /* پیش‌فرض برای حرکت افقی */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* انیمیشن از چپ به راست */
 .animated-section-left {
-    transform: translateX(-100px);
+  transform: translateX(-100px);
 }
 .animated-section-left.active {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* انیمیشن از راست به چپ */
 .animated-section-right {
-    transform: translateX(100px);
+  transform: translateX(100px);
 }
 .animated-section-right.active {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* انیمیشن از بالا به پایین */
 .animated-section-top {
-    transform: translateY(-100px);
+  transform: translateY(-100px);
 }
 .animated-section-top.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* انیمیشن از پایین به بالا (با تأخیر بیشتر) */
 .animated-section-bottom-slow {
-    transform: translateY(100px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* تأخیر بیشتر */
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* تأخیر بیشتر */
 }
 .animated-section-bottom-slow.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* انیمیشن عادی (از پایین به بالا) */
 .animated-section {
-    transform: translateY(100px);
+  transform: translateY(100px);
 }
 .animated-section.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 992px) {
+  /* تغییر حالت انیمیشن از چپ به راست به پایین به بالا */
+  .animated-section-left,
+  .animated-section-right {
+    transform: translateY(100px); /* حرکت از پایین به بالا */
+  }
+
+  .animated-section-left.active,
+  .animated-section-right.active {
+    transform: translateY(0); /* حرکت به حالت نهایی */
+  }
 }

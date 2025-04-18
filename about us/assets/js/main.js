@@ -380,3 +380,37 @@ document.addEventListener('DOMContentLoaded', function() {
   
   tickerContentElement.style.animationDuration = `${animationDuration}s`;
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const wrappers = document.querySelectorAll('.our-work-samples-section .wrapper');
+
+  // حذف کلاس active از تمام wrapperها و اضافه کردن آن به wrapper هاور شده
+  wrappers.forEach(wrapper => {
+      wrapper.addEventListener('mouseenter', function () {
+          // غیرفعال کردن همه wrapperها
+          wrappers.forEach(w => w.classList.remove('active', 'open-from-left', 'open-from-right'));
+
+          // فعال کردن wrapper هاور شده
+          this.classList.add('active');
+          this.classList.add('open-from-right'); // یا open-from-left بسته به نیاز
+
+          // مقداردهی اولیه اسکرول بار
+          initImageScrollbars();
+      });
+  });
+
+  // فعال کردن اولین wrapper در بارگذاری صفحه
+  activateFirstWrapperOnLoad();
+});
+
+// تابع فعال کردن اولین wrapper در بارگذاری صفحه
+function activateFirstWrapperOnLoad() {
+  const wrappers = document.querySelectorAll('.our-work-samples-section .wrapper');
+  if (wrappers.length > 0) {
+      wrappers[0].classList.add('active');
+      wrappers[0].classList.add('open-from-right');
+      initImageScrollbars();
+  }
+}
