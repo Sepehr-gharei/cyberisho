@@ -1,0 +1,484 @@
+/*************** start work text samples section ***************/
+.work-text-samples-section {
+  margin-top: 85px;
+}
+
+.work-text-samples-section .header-text {
+  position: relative;
+}
+.work-text-samples-section .header-text small {
+  position: absolute;
+  top: -10px;
+  color: var(--light-shadow-white-color);
+  letter-spacing: 0.1rem;
+}
+.work-text-samples-section .header-text h2 {
+  font-size: 32px;
+  font-family: peyda-bold;
+}
+.work-text-samples-section .breadcrumb {
+  margin: 5px 0px;
+}
+.work-text-samples-section .breadcrumb .home-page,
+.work-text-samples-section .breadcrumb .home-page a {
+  display: flex;
+  align-items: center;
+}
+.work-text-samples-section .breadcrumb svg {
+  width: 15px;
+  height: 15px;
+}
+.work-text-samples-section .breadcrumb .arrow-icon {
+  display: flex;
+  align-items: center;
+}
+.work-text-samples-section .breadcrumb .arrow-icon svg {
+  fill: none;
+  margin: 0 6px;
+  width: 13px;
+  height: 13px;
+}
+.work-text-samples-section .breadcrumb {
+  align-items: center;
+  margin-bottom: 25px;
+}
+.work-text-samples-section .breadcrumb .breadcrumb-page {
+  font-size: 14px;
+}
+.work-text-samples-section .text-container {
+  text-align: justify;
+}
+.work-text-samples-section .text-container .text-info {
+  color: #ff7e38;
+}
+/*************** end work text samples section  ***************/
+.example-of-portfolio-section {
+  margin: 100px 0;
+}
+.example-of-portfolio-section .example-of-portfolio-container .title {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -16.5px;
+}
+.example-of-portfolio-section .example-of-portfolio-container .title a {
+  padding: 10px 30px;
+  background: var(--background-color);
+  border-radius: 50px;
+  position: relative;
+  font-size: 20px;
+}
+.example-of-portfolio-section .example-of-portfolio-container .title a::before {
+  position: absolute;
+  border-top-left-radius: 100px;
+  width: 25px;
+  right: -25px;
+  transform: rotate(14deg);
+  bottom: 15.5px;
+  height: 9.5px;
+  box-shadow: -15px -1px 0 0px var(--background-color);
+  content: "";
+}
+.example-of-portfolio-section .example-of-portfolio-container .title a::after {
+  position: absolute;
+  border-top-right-radius: 100px;
+  width: 25px;
+  left: -25px;
+  transform: rotate(346deg);
+  bottom: 15.5px;
+  height: 9.5px;
+  box-shadow: 15px -1px 0 0px var(--background-color);
+  content: "";
+}
+.example-of-portfolio-section .example-of-portfolio-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.example-of-portfolio-section .example-of-portfolio-container .img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.example-of-portfolio-section .example-of-portfolio-container .img-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .website
+  .icon
+  svg {
+  width: 65px;
+  height: 65px;
+}
+.example-of-portfolio-section .example-of-portfolio-container .text-field {
+  position: absolute;
+  width: 100%;
+  padding: 0 150px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .text-field
+  .about-website {
+  color: var(--light-white-text);
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .text-field
+  .website {
+  display: flex;
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .img-wrapper
+  .img-shadow {
+  position: relative; /* برای اطمینان از اینکه shadow-overlay داخل img-wrapper قرار می‌گیرد */
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .text-field
+  .website
+  .website-name {
+  padding: 0 20px;
+  color: var(--light-white-text);
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .text-field
+  .website
+  .website-name
+  h3 {
+  font-size: 26px;
+}
+.example-of-portfolio-section
+  .example-of-portfolio-container
+  .text-field
+  .website
+  .website-name
+  p {
+  font-size: 14px;
+  padding: 10px 25px;
+}
+.example-of-portfolio-section .example-of-portfolio-container .shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    #212640 0%,
+    /* رنگ سایه در سمت راست */ rgba(33, 38, 64, 0) 100% /* محو شدن به سمت وسط */
+  );
+  border-radius: 20px;
+  pointer-events: none; /* جلوگیری از تعامل با لایه سایه */
+}
+
+.example-of-portfolio-section-blue-color
+  .example-of-portfolio-container
+  .shadow-overlay {
+  background: linear-gradient(
+    to left,
+    #2901be 0%,
+    /* رنگ سایه در سمت راست */ rgba(40, 66, 194, 0.363) 100%
+      /* محو شدن به سمت وسط */
+  );
+}
+
+.portfolio-web-design-sample-section {
+  padding: 50px 0;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .section {
+  display: flex;
+  flex-direction: column; /* برای قرار گرفتن title بالای wrapperها */
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--light-blue-color);
+  padding: 30px 30px 60px 30px;
+  border-radius: 20px;
+}
+
+.portfolio-web-design-sample-section .section .title {
+  width: 100%; /* عرض 100% برای title داخل section */
+  padding: 10px 0;
+  justify-content: space-between;
+  display: flex;
+}
+.portfolio-web-design-sample-section .footer {
+  text-align: center;
+  margin-top: -15px;
+  width: 100%;
+}
+.portfolio-web-design-sample-section .footer a {
+  padding: 10px 30px;
+  background: var(--background-color);
+  border-radius: 50px;
+  position: relative;
+  font-size: 20px;
+}
+.portfolio-web-design-sample-section .footer a::after {
+  position: absolute;
+  border-bottom-left-radius: 100px;
+  width: 25px;
+  right: -25px;
+  transform: rotate(346deg);
+  bottom: 26.5px;
+  height: 9.5px;
+  box-shadow: -15px 1px 0 0px var(--background-color);
+  content: "";
+}
+.portfolio-web-design-sample-section .footer a::before {
+  position: absolute;
+  border-bottom-right-radius: 100px;
+  width: 25px;
+  left: -25px;
+  transform: rotate(14deg);
+  bottom: 26.5px;
+  height: 9.5px;
+  box-shadow: 15px 1px 0 0px var(--background-color);
+  content: "";
+}
+
+.portfolio-web-design-sample-section .section .title h3 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  color: var(--dark-blue-text-color);
+}
+
+.portfolio-web-design-sample-section .section .title .website {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-web-design-sample-section .section .title .website p {
+  font-size: 16px;
+  color: var(--normal-text-color);
+  margin: 0;
+}
+
+.portfolio-web-design-sample-section .section .title .website .icon svg {
+  width: 25px;
+  height: 25px;
+}
+.portfolio-web-design-sample-section .wrapper-container {
+  display: flex;
+  height: 380px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .wrapper {
+  height: 100%;
+  background-color: var(--light-white-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  border-radius: 20px;
+  padding: 0 10px;
+  padding-left: 40px;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .wrapper.w30 {
+  width: 25%;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .wrapper.w70 {
+  width: 70%;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .content {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .image-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+  border-radius: 15px;
+  animation: fadeIn 0.5s ease;
+  scrollbar-width: none;
+}
+
+.portfolio-web-design-sample-section
+  .content-wrapper
+  .image-container::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-web-design-sample-section .content-wrapper .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* استایل اسکرول‌بار سفارشی */
+.portfolio-web-design-sample-section .image-scrollbar-container {
+  display: block !important;
+  position: absolute;
+  top: 5%;
+  left: 15px;
+  width: 10px;
+  height: 90%;
+  background: var(--background-color);
+  border-radius: 14px;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.portfolio-web-design-sample-section .image-scrollbar-thumb {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  left: -4px;
+  box-shadow: 0 0 0 2px var(--light-blue-color);
+}
+
+.portfolio-web-design-sample-section .image-scrollbar-thumb .inside {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: var(--dark-blue-text-color);
+  position: absolute;
+  left: 0.24rem;
+  top: 0.22rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-bottom: 130px;
+}
+.pagination a {
+  padding: 2px 10px;
+  margin: 0 5px;
+  color: var(--normal-text-color);
+}
+.pagination span {
+  padding: 2px 10px;
+  margin: 0 5px;
+  color: var(--normal-text-color);
+}
+.pagination span.current {
+  background-color: var(--light-white-color);
+  border-radius: 5px;
+}
+.pagination .next-icon svg {
+  width: 15px;
+  height: 15px;
+  transform: rotate(-90deg);
+}
+.pagination .pre-icon svg {
+  width: 15px;
+  height: 15px;
+  transform: rotate(90deg);
+}
+@media (min-width: 1400px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+  .example-of-portfolio-section .example-of-portfolio-container .text-field {
+    padding: 0 90px;
+  }
+  .portfolio-web-design-sample-section .content-wrapper .wrapper.w70 {
+    width: 100%;
+    height: 485px;
+  }
+  .portfolio-web-design-sample-section .content-wrapper .wrapper.w30 {
+    width: 60%;
+    height: 485px;
+  }
+  .portfolio-web-design-sample-section .wrapper-container {
+    height: 1000px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    margin: 40px 0;
+  }
+}
+@media (max-width: 768px) {
+  .example-of-portfolio-section .example-of-portfolio-container .text-field {
+    padding: 50px 90px;
+    justify-content: space-around;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .example-of-portfolio-section
+    .example-of-portfolio-container
+    .text-field
+    .website {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolio-web-design-sample-section .content-wrapper .wrapper.w70 {
+    width: 100%;
+    height: 385px;
+  }
+  .portfolio-web-design-sample-section .content-wrapper .wrapper.w30 {
+    width: 60%;
+    height: 385px;
+  }
+  .portfolio-web-design-sample-section .wrapper-container {
+    height: 800px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    margin: 40px 0;
+  }
+}
+@media (max-width: 576px) {
+  .example-of-portfolio-section .example-of-portfolio-container {
+    padding: 0;
+  }
+  .example-of-portfolio-section .example-of-portfolio-container .img-wrapper {
+    padding: 0 15px;
+  }
+  .example-of-portfolio-section .example-of-portfolio-container .text-field {
+    padding: 50px 15px;
+  }
+}
+@media (max-width: 400px) {
+}

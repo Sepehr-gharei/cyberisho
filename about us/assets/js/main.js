@@ -414,3 +414,6 @@ function activateFirstWrapperOnLoad() {
       initImageScrollbars();
   }
 }
+
+
+
