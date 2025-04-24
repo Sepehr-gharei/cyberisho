@@ -5,8 +5,7 @@
 // accordion item
 // scroll bar
 // work samples section
-// text loop 
-
+// text loop
 
 // ********************************  about us text ********************************
 $(document).ready(function () {
@@ -222,16 +221,18 @@ updateThumbPosition();
 function toggleWrapper(element) {
   // اگر روی تصویر کلیک شده باشد، کاری نکنیم
   if (event.target.tagName === "IMG") {
-      return;
+    return;
   }
   // اگر روی آیتم فعال کلیک شده باشد، بسته نشود
   if (element.classList.contains("active")) {
-      return;
+    return;
   }
   // مخفی کردن اسکرول بارهای قبلی
-  document.querySelectorAll('.image-scrollbar-container').forEach(scrollbar => {
-      scrollbar.style.display = 'none';
-  });
+  document
+    .querySelectorAll(".image-scrollbar-container")
+    .forEach((scrollbar) => {
+      scrollbar.style.display = "none";
+    });
   // Find the currently active wrapper
   const currentActive = document.querySelector(".wrapper.active");
   const wrappers = Array.from(document.querySelectorAll(".wrapper"));
@@ -239,166 +240,179 @@ function toggleWrapper(element) {
   const activeIndex = wrappers.indexOf(currentActive);
   // Remove active and direction classes from all wrappers
   wrappers.forEach((wrapper) => {
-      wrapper.classList.remove("active", "open-from-left", "open-from-right");
+    wrapper.classList.remove("active", "open-from-left", "open-from-right");
   });
   // Add active class to clicked wrapper
   element.classList.add("active");
   // Determine direction based on the position of the clicked wrapper relative to the active one
   if (currentActive && clickedIndex < activeIndex) {
-      element.classList.add("open-from-left");
+    element.classList.add("open-from-left");
   } else {
-      element.classList.add("open-from-right");
+    element.classList.add("open-from-right");
   }
   // نمایش اسکرول بار فقط برای wrapper فعال جدید
   initImageScrollbars();
 }
 // تابع جدید برای فعال کردن اولین wrapper در بارگذاری صفحه
 function activateFirstWrapperOnLoad() {
-  const wrappers = document.querySelectorAll('.our-work-samples-section .wrapper');
+  const wrappers = document.querySelectorAll(
+    ".our-work-samples-section .wrapper"
+  );
   if (wrappers.length > 0) {
     // غیرفعال کردن همه wrapperها
-    wrappers.forEach(wrapper => wrapper.classList.remove('active'));
-    
+    wrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+
     // فعال کردن اولین wrapper
-    wrappers[0].classList.add('active');
-    wrappers[0].classList.add('open-from-right');
-    
+    wrappers[0].classList.add("active");
+    wrappers[0].classList.add("open-from-right");
+
     // مقداردهی اولیه اسکرول بار
     initImageScrollbars();
   }
 }
 
 // فراخوانی تابع هنگام بارگذاری صفحه
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   activateFirstWrapperOnLoad();
 });
 
 // تغییر در تابع initImageScrollbars برای پاک کردن اسکرول بارهای قبلی
 function initImageScrollbars() {
   // حذف همه اسکرول بارهای موجود
-  document.querySelectorAll('.image-scrollbar-container').forEach(el => el.remove());
-  
-  const activeWrapper = document.querySelector('.our-work-samples-section .wrapper.active');
+  document
+    .querySelectorAll(".image-scrollbar-container")
+    .forEach((el) => el.remove());
+
+  const activeWrapper = document.querySelector(
+    ".our-work-samples-section .wrapper.active"
+  );
   if (!activeWrapper) return;
 
-  const container = activeWrapper.querySelector('.image-container');
+  const container = activeWrapper.querySelector(".image-container");
   if (!container) return;
 
   // ایجاد اسکرول بار جدید
-  const scrollbarContainer = document.createElement('div');
-  scrollbarContainer.className = 'image-scrollbar-container';
-  
-  const thumb = document.createElement('div');
-  thumb.className = 'image-scrollbar-thumb';
-  
-  const inside = document.createElement('div');
-  inside.className = 'inside';
-  
+  const scrollbarContainer = document.createElement("div");
+  scrollbarContainer.className = "image-scrollbar-container";
+
+  const thumb = document.createElement("div");
+  thumb.className = "image-scrollbar-thumb";
+
+  const inside = document.createElement("div");
+  inside.className = "inside";
+
   thumb.appendChild(inside);
   scrollbarContainer.appendChild(thumb);
   activeWrapper.appendChild(scrollbarContainer);
-  
+
   // عملکرد اسکرول
   function updateThumbPosition() {
     const containerHeight = container.clientHeight;
     const contentHeight = container.scrollHeight;
-    
+
     if (contentHeight <= containerHeight) {
-      thumb.style.display = 'none';
+      thumb.style.display = "none";
       return;
     } else {
-      thumb.style.display = 'block';
+      thumb.style.display = "block";
     }
-    
+
     const scrollRatio = containerHeight / contentHeight;
     const thumbMaxTop = scrollbarContainer.clientHeight - thumb.offsetHeight;
     const scrollTop = container.scrollTop;
     const maxScroll = contentHeight - containerHeight;
     const thumbTop = (scrollTop / maxScroll) * thumbMaxTop;
-    
+
     thumb.style.top = `${thumbTop}px`;
   }
-  
+
   // رویدادها و بقیه کدها مانند قبل...
-  container.addEventListener('scroll', updateThumbPosition);
-  
+  container.addEventListener("scroll", updateThumbPosition);
+
   let isDragging = false;
   let startY, startThumbTop;
-  
-  thumb.addEventListener('mousedown', (e) => {
+
+  thumb.addEventListener("mousedown", (e) => {
     isDragging = true;
     startY = e.clientY;
     startThumbTop = parseFloat(thumb.style.top || 0);
     e.preventDefault();
   });
-  
-  document.addEventListener('mousemove', (e) => {
+
+  document.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
-    
+
     const deltaY = e.clientY - startY;
     const thumbMaxTop = scrollbarContainer.clientHeight - thumb.offsetHeight;
-    
+
     let newThumbTop = startThumbTop + deltaY;
     newThumbTop = Math.max(0, Math.min(newThumbTop, thumbMaxTop));
     thumb.style.top = `${newThumbTop}px`;
-    
+
     const contentHeight = container.scrollHeight;
     const containerHeight = container.clientHeight;
     const scrollRatio = newThumbTop / thumbMaxTop;
     container.scrollTop = scrollRatio * (contentHeight - containerHeight);
   });
-  
-  document.addEventListener('mouseup', () => {
+
+  document.addEventListener("mouseup", () => {
     isDragging = false;
   });
-  
+
   updateThumbPosition();
-  
+
   const resizeObserver = new ResizeObserver(updateThumbPosition);
   resizeObserver.observe(container);
 }
-// text loop 
-document.addEventListener('DOMContentLoaded', function() {
-  const tickerContent = document.getElementById('tickerContent');
+// text loop
+document.addEventListener("DOMContentLoaded", function () {
+  const tickerContent = document.getElementById("tickerContent");
   const originalContent = tickerContent.innerHTML;
-  
+
   // تکرار محتوا 6 بار برای ایجاد حلقه پیوسته
-  tickerContent.innerHTML = originalContent + originalContent + originalContent + 
-                           originalContent + originalContent + originalContent;
-  
+  tickerContent.innerHTML =
+    originalContent +
+    originalContent +
+    originalContent +
+    originalContent +
+    originalContent +
+    originalContent;
+
   // تنظیم عرض محتوا بر اساس عرض واقعی
-  const tickerItems = document.querySelectorAll('.ticker-item');
+  const tickerItems = document.querySelectorAll(".ticker-item");
   let totalWidth = 0;
-  
-  tickerItems.forEach(item => {
-      totalWidth += item.offsetWidth + 20; // 20px فاصله بین آیتم‌ها
+
+  tickerItems.forEach((item) => {
+    totalWidth += item.offsetWidth + 20; // 20px فاصله بین آیتم‌ها
   });
-  
+
   // تنظیم مدت انیمیشن بر اساس عرض کل
-  const tickerContentElement = document.querySelector('.ticker-content');
+  const tickerContentElement = document.querySelector(".ticker-content");
   const animationDuration = totalWidth / 100; // سرعت حرکت
-  
+
   tickerContentElement.style.animationDuration = `${animationDuration}s`;
 });
 
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const wrappers = document.querySelectorAll('.our-work-samples-section .wrapper');
+document.addEventListener("DOMContentLoaded", function () {
+  const wrappers = document.querySelectorAll(
+    ".our-work-samples-section .wrapper"
+  );
 
   // حذف کلاس active از تمام wrapperها و اضافه کردن آن به wrapper هاور شده
-  wrappers.forEach(wrapper => {
-      wrapper.addEventListener('mouseenter', function () {
-          // غیرفعال کردن همه wrapperها
-          wrappers.forEach(w => w.classList.remove('active', 'open-from-left', 'open-from-right'));
+  wrappers.forEach((wrapper) => {
+    wrapper.addEventListener("mouseenter", function () {
+      // غیرفعال کردن همه wrapperها
+      wrappers.forEach((w) =>
+        w.classList.remove("active", "open-from-left", "open-from-right")
+      );
 
-          // فعال کردن wrapper هاور شده
-          this.classList.add('active');
-          this.classList.add('open-from-right'); // یا open-from-left بسته به نیاز
+      // فعال کردن wrapper هاور شده
+      this.classList.add("active");
+      this.classList.add("open-from-right"); // یا open-from-left بسته به نیاز
 
-          // مقداردهی اولیه اسکرول بار
-          initImageScrollbars();
-      });
+      // مقداردهی اولیه اسکرول بار
+      initImageScrollbars();
+    });
   });
 
   // فعال کردن اولین wrapper در بارگذاری صفحه
@@ -407,13 +421,81 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // تابع فعال کردن اولین wrapper در بارگذاری صفحه
 function activateFirstWrapperOnLoad() {
-  const wrappers = document.querySelectorAll('.our-work-samples-section .wrapper');
+  const wrappers = document.querySelectorAll(
+    ".our-work-samples-section .wrapper"
+  );
   if (wrappers.length > 0) {
-      wrappers[0].classList.add('active');
-      wrappers[0].classList.add('open-from-right');
-      initImageScrollbars();
+    wrappers[0].classList.add("active");
+    wrappers[0].classList.add("open-from-right");
+    initImageScrollbars();
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  // فعال کردن اولین آیتم به صورت پیش‌فرض
+  const firstItem = document.querySelector(".programming-fields .item");
+  if (firstItem) {
+    firstItem.classList.add("active");
+  }
 
+  // اضافه کردن رویداد کلیک به آیتم‌ها
+  const items = document.querySelectorAll(".programming-fields .item");
+  items.forEach((item) => {
+    item.addEventListener("click", function () {
+      // حذف کلاس active از همه آیتم‌ها
+      items.forEach((i) => i.classList.remove("active"));
 
+      // اضافه کردن کلاس active به آیتم کلیک شده
+      this.classList.add("active");
+
+      // دریافت اطلاعات از ویژگی‌های data
+      const imageUrl = this.getAttribute("data-image");
+      const title = this.getAttribute("data-title");
+      const subtitle = this.getAttribute("data-subtitle");
+      const description = this.getAttribute("data-description");
+      const time = this.getAttribute("data-time");
+      const publish = this.getAttribute("data-publish");
+
+      const imageWrapper = document.querySelector(
+        ".programming-fields .image-wrapper"
+      );
+
+      // غیرفعال کردن تمام محتواهای فعال
+      const activeContents = imageWrapper.querySelectorAll(".active-content");
+      activeContents.forEach((content) => {
+        content.classList.remove("active-content");
+        setTimeout(() => content.remove(), 500);
+      });
+
+      // ایجاد محتوای جدید
+      const newContent = document.createElement("div");
+      newContent.className = "image-container";
+      newContent.innerHTML = `
+        <img src="${imageUrl}" alt="${title}">
+        <div class="description">
+          <div class="header">
+            <p><span>${title}</span></p>
+          </div>
+          <div class="body">
+            <h3>${subtitle}</h3>
+            <p>${description}</p>
+          </div>
+          <div class="footer">
+            <div class="item"><p>${time}</p></div>
+            <div class="item"><p>${publish}</p></div>
+          </div>
+        </div>
+      `;
+
+      imageWrapper.appendChild(newContent);
+
+      // فعال کردن محتوای جدید بعد از اضافه شدن به DOM
+      setTimeout(() => {
+        newContent.classList.add("active-content");
+      }, 10);
+    });
+  });
+
+  // کدهای مربوط به اسکرول بار سفارشی (همانند قبل)
+  // ...
+});

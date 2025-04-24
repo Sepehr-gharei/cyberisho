@@ -860,12 +860,40 @@
 }
 /*************** end accordion fag ****************/
 /*************** start article slider ****************/
-
+.article-slider.shadow-around {
+  position: relative;
+}
+.article-slider.shadow-around::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  z-index: 100;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: var(--background-color);
+  box-shadow: 76px 0px 200px 300px var(--background-color);
+}
+.article-slider.shadow-around::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  z-index: 1000;
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: var(--background-color);
+  box-shadow: -76px 0px 200px 300px var(--background-color);
+}
 .article-slider {
   margin: 100px 0 150px 0;
 }
 .article-slider .title-container h2 {
   font-size: 28px;
+  z-index: 1001;
+  position: relative;
 }
 .article-slider .footer-container {
   text-align: center;
