@@ -286,6 +286,16 @@
   .comment-container
   .comment-item
   .user-comment-details
+  .user-detail
+  .date-of-comment span{ 
+
+    padding: 0 3px ;
+  }
+.comment-section
+  .user-comment-container
+  .comment-container
+  .comment-item
+  .user-comment-details
   .answer {
   padding: 10px 0;
 }
