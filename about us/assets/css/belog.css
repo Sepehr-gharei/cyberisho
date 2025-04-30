@@ -401,3 +401,21 @@
   padding: 10px 0;
 }
 /* ************************* start  belog section ************************* */
+
+
+
+
+@media (max-width: 992px) {
+  .belog-title-section .programming-fields .content .scroll-container {
+    max-height: 320px;
+  }
+  .belog-title-section .programming-fields .image-container img {
+    width: 100%;
+    height: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .belog-title-section .programming-fields .wrapper {
+    margin-top: 35px;
+  }
+}

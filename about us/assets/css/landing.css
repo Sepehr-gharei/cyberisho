@@ -864,7 +864,6 @@ webdesing-text-field-section {
 }
 .type-of-side-section .wrapper .img-section {
   width: 35%;
-  height: 350px;
 }
 .type-of-side-section .wrapper:nth-child(even) .img-section {
   padding-left: 15px;
@@ -1043,6 +1042,9 @@ webdesing-text-field-section {
   }
 }
 @media (max-width: 992px) {
+  .type-of-side-section .wrapper .img-section {
+    height: 350px;
+  }
   .webdesing-section .info-wrapper {
     width: 100%;
   }
