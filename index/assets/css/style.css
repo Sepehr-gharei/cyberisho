@@ -6323,23 +6323,20 @@ webdesing-text-field-section {
   font-weight: 200;
 }
 
-.belog-title-section .programming-fields .content .scroll-container {
+.belog-title-section .programming-fields .content .blog-scroll-container {
   max-height: 400px;
   overflow-y: hidden;
   position: relative;
   padding-left: 45px;
 }
 
-.belog-title-section .programming-fields .content .scroll-content {
+.belog-title-section .programming-fields .content .blog-scroll-content {
   overflow-y: auto;
   max-height: 400px;
   scrollbar-width: none;
 }
 
-.belog-title-section
-  .programming-fields
-  .content
-  .scroll-content::-webkit-scrollbar {
+.belog-title-section .programming-fields .content .blog-scroll-content::-webkit-scrollbar {
   display: none;
 }
 
@@ -6364,7 +6361,6 @@ webdesing-text-field-section {
   color: var(--light-white-text);
 }
 
-/* اسکرول بار سفارشی */
 .belog-title-section .programming-fields .content .custom-scrollbar {
   position: absolute;
   top: 10px;
@@ -6387,11 +6383,7 @@ webdesing-text-field-section {
   box-shadow: 0 0px 0px 6px var(--light-white-color);
 }
 
-.belog-title-section
-  .programming-fields
-  .content
-  .custom-scrollbar-thumb
-  .inside {
+.belog-title-section .programming-fields .content .custom-scrollbar-thumb .inside {
   width: 60%;
   height: 60%;
   border-radius: 50%;
@@ -6401,14 +6393,15 @@ webdesing-text-field-section {
   top: 0.21rem;
 }
 
-/* بخش تصویر */
 .belog-title-section .programming-fields .image-preview {
   padding: 0;
   padding-left: 30px;
 }
+
 .belog-title-section .programming-fields .section {
   padding: 0;
 }
+
 .belog-title-section .programming-fields .image-wrapper {
   height: 100%;
   border-radius: 20px;
@@ -6430,28 +6423,6 @@ webdesing-text-field-section {
   animation: fadeIn 0.5s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* رسپانسیو */
-@media (max-width: 768px) {
-  .belog-title-section .programming-fields .image-preview {
-    padding-left: 0;
-    margin-top: 20px;
-  }
-
-  .belog-title-section .programming-fields .content .scroll-container {
-    max-height: 300px;
-  }
-}
-
-/* استایل‌های جدید برای بخش توضیحات */
 .belog-title-section .programming-fields .image-container {
   display: none;
   height: 100%;
@@ -6475,11 +6446,13 @@ webdesing-text-field-section {
   border-radius: 0 0 12px 12px;
   height: 30%;
 }
+
 .belog-title-section .programming-fields .description .header {
   margin-top: -25px;
   display: flex;
   justify-content: center;
 }
+
 .belog-title-section .programming-fields .description .header p {
   display: inline;
   width: 30%;
@@ -6490,9 +6463,11 @@ webdesing-text-field-section {
   position: relative;
   color: var(--dark-blue-text-color);
 }
+
 .belog-title-section .programming-fields .description .header p span {
   position: relative;
 }
+
 .belog-title-section .programming-fields .description .header p span::after {
   position: absolute;
   width: 8px;
@@ -6504,6 +6479,7 @@ webdesing-text-field-section {
   transform: translateY(-50%);
   border-radius: 50%;
 }
+
 .belog-title-section .programming-fields .description .header p::before {
   margin-top: -24px;
   border-bottom-left-radius: 35px;
@@ -6517,6 +6493,7 @@ webdesing-text-field-section {
   position: absolute;
   content: "";
 }
+
 .belog-title-section .programming-fields .description .header p::after {
   margin-top: -24px;
   border-bottom-right-radius: 35px;
@@ -6530,34 +6507,36 @@ webdesing-text-field-section {
   position: absolute;
   content: "";
 }
+
 .belog-title-section .programming-fields .description .body {
   padding-top: 10px;
 }
+
 .belog-title-section .programming-fields .description .body h3 {
   font-size: 24px;
 }
+
 .belog-title-section .programming-fields .description .body p {
   color: var(--normal-text-color);
   padding-top: 5px;
 }
+
 .belog-title-section .programming-fields .description .footer {
   display: flex;
   padding-top: 10px;
 }
+
 .belog-title-section .programming-fields .description .footer .item {
   padding: 0 20px;
   margin: 0 8px;
   color: var(--normal-text-color);
-
   position: relative;
 }
-.belog-title-section
-  .programming-fields
-  .description
-  .footer
-  .item:first-of-type {
+
+.belog-title-section .programming-fields .description .footer .item:first-of-type {
   padding-right: 0;
 }
+
 .belog-title-section .programming-fields .description .footer .item::after {
   content: "|";
   position: absolute;
@@ -6565,11 +6544,8 @@ webdesing-text-field-section {
   left: -6px;
   color: var(--normal-text-color);
 }
-.belog-title-section
-  .programming-fields
-  .description
-  .footer
-  .item:last-of-type::after {
+
+.belog-title-section .programming-fields .description .footer .item:last-of-type::after {
   content: "";
   position: absolute;
   top: 0;
@@ -6586,7 +6562,17 @@ webdesing-text-field-section {
     transform: translateY(0);
   }
 }
-/* ************************* end  belog title section ************************* */
+
+@media (max-width: 768px) {
+  .belog-title-section .programming-fields .image-preview {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .belog-title-section .programming-fields .content .blog-scroll-container {
+    max-height: 300px;
+  }
+}
 /* ************************* start  belog section ************************* */
 
 .blog-section .wrapper:hover {

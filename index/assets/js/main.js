@@ -431,71 +431,19 @@ function activateFirstWrapperOnLoad() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // فعال کردن اولین آیتم به صورت پیش‌فرض
-  const firstItem = document.querySelector(".programming-fields .item");
-  if (firstItem) {
-    firstItem.classList.add("active");
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector('.belog-title-section .programming-fields');
+  const items = document.querySelectorAll('.belog-title-section .programming-fields .blog-scroll-content .item');
+  const imageContainers = document.querySelectorAll('.belog-title-section .programming-fields .image-container');
 
-  // اضافه کردن رویداد کلیک به آیتم‌ها
-  const items = document.querySelectorAll(".programming-fields .item");
-  items.forEach((item) => {
-    item.addEventListener("click", function () {
-      // حذف کلاس active از همه آیتم‌ها
-      items.forEach((i) => i.classList.remove("active"));
-
-      // اضافه کردن کلاس active به آیتم کلیک شده
-      this.classList.add("active");
-
-      // دریافت اطلاعات از ویژگی‌های data
-      const imageUrl = this.getAttribute("data-image");
-      const title = this.getAttribute("data-title");
-      const subtitle = this.getAttribute("data-subtitle");
-      const description = this.getAttribute("data-description");
-      const time = this.getAttribute("data-time");
-      const publish = this.getAttribute("data-publish");
-
-      const imageWrapper = document.querySelector(
-        ".programming-fields .image-wrapper"
-      );
-
-      // غیرفعال کردن تمام محتواهای فعال
-      const activeContents = imageWrapper.querySelectorAll(".active-content");
-      activeContents.forEach((content) => {
-        content.classList.remove("active-content");
-        setTimeout(() => content.remove(), 500);
-      });
-
-      // ایجاد محتوای جدید
-      const newContent = document.createElement("div");
-      newContent.className = "image-container";
-      newContent.innerHTML = `
-        <img src="${imageUrl}" alt="${title}">
-        <div class="description">
-          <div class="header">
-            <p><span>${title}</span></p>
-          </div>
-          <div class="body">
-            <h3>${subtitle}</h3>
-            <p>${description}</p>
-          </div>
-          <div class="footer">
-            <div class="item"><p>${time}</p></div>
-            <div class="item"><p>${publish}</p></div>
-          </div>
-        </div>
-      `;
-
-      imageWrapper.appendChild(newContent);
-
-      // فعال کردن محتوای جدید بعد از اضافه شدن به DOM
-      setTimeout(() => {
-        newContent.classList.add("active-content");
-      }, 10);
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      const itemNumber = item.id.split('-')[1];
+      const targetContainer = container.querySelector(`#content-${itemNumber}`);
+      imageContainers.forEach(container => container.classList.remove('active-content'));
+      targetContainer.classList.add('active-content');
     });
   });
-
-  // کدهای مربوط به اسکرول بار سفارشی (همانند قبل)
-  // ...
 });
