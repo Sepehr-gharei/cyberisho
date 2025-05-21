@@ -455,10 +455,7 @@
     <div class="more-information">
       <div class="container">
         <div class="row">
-          <div
-            
-            class="video-container animated-section-right"
-          >
+          <div class="video-container animated-section-right">
             <!-- ویدیو -->
             <video
               id="myVideo"
@@ -527,21 +524,14 @@
     <!--************************* start chart container *************************-->
     <div class="container-fluid chart-container animated-section">
       <div class="row">
-        <div class="col-6 right-side">
+        <div class="col-12 col-md-6 right-side">
           <p>نمـودار عملکرد سایبریـــشو</p>
           <h3>در چند سـال گزشـته</h3>
         </div>
-        <div class="col-6 left-side">
-          <img
-            class="small"
-            src="./assets/img/Performance-chart.png"
-            alt="chart"
-          />
-          <img
-            class="large"
-            src="./assets/img/Performance-chart-large.png"
-            alt="chart"
-          />
+        <div class="col-12 col-md-6 left-side">
+          <div class="chart-section">
+            <svg id="myChart"></svg>
+          </div>
         </div>
       </div>
     </div>
@@ -749,5 +739,7 @@
       crossorigin
       src="https://panorama-slider.uiinitiative.com/assets/index.d2ce9dca.js"
     ></script>
+    <script src="assets/js/chart-container.js" ></script>
+   
   </body>
 </html>
