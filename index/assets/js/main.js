@@ -7,6 +7,7 @@
 // work samples section
 // text loop
 
+
 // ********************************  about us text ********************************
 $(document).ready(function () {
   // متن اصلی و دکمه را انتخاب کنید
@@ -374,34 +375,7 @@ function initImageScrollbars() {
   const resizeObserver = new ResizeObserver(updateThumbPosition);
   resizeObserver.observe(container);
 }
-// text loop
-document.addEventListener("DOMContentLoaded", function () {
-  const tickerContent = document.getElementById("tickerContent");
-  const originalContent = tickerContent.innerHTML;
 
-  // تکرار محتوا 6 بار برای ایجاد حلقه پیوسته
-  tickerContent.innerHTML =
-    originalContent +
-    originalContent +
-    originalContent +
-    originalContent +
-    originalContent +
-    originalContent;
-
-  // تنظیم عرض محتوا بر اساس عرض واقعی
-  const tickerItems = document.querySelectorAll(".ticker-item");
-  let totalWidth = 0;
-
-  tickerItems.forEach((item) => {
-    totalWidth += item.offsetWidth + 20; // 20px فاصله بین آیتم‌ها
-  });
-
-  // تنظیم مدت انیمیشن بر اساس عرض کل
-  const tickerContentElement = document.querySelector(".ticker-content");
-  const animationDuration = totalWidth / 100; // سرعت حرکت
-
-  tickerContentElement.style.animationDuration = `${animationDuration}s`;
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const wrappers = document.querySelectorAll(
@@ -458,3 +432,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tickerContainer = document.querySelector(".ticker-container");
+  let tickerContents = document.querySelectorAll(".ticker-content");
+
+  // Function to clone and append the last ticker-content
+  function appendNewTickerContent() {
+    const lastTickerContent = tickerContents[tickerContents.length - 1];
+    const newTickerContent = lastTickerContent.cloneNode(true);
+    tickerContainer.appendChild(newTickerContent);
+    tickerContents = document.querySelectorAll(".ticker-content"); // Update the NodeList
+  }
+
+  // Function to handle animation end
+  function handleAnimationEnd(event) {
+    if (event.target === tickerContents[0]) {
+      // Remove the first ticker-content
+      event.target.remove();
+      tickerContents = document.querySelectorAll(".ticker-content"); // Update the NodeList
+
+      // Append a new copy of the last ticker-content
+      appendNewTickerContent();
+    }
+  }
+
+  // Add animationend event listener to all ticker-content elements
+  tickerContents.forEach((content) => {
+    content.addEventListener("animationend", handleAnimationEnd);
+  });
+
+  // Ensure there’s always a second ticker-content to start with
+  if (tickerContents.length === 1) {
+    appendNewTickerContent();
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tickerContent = document.getElementById("tickerContent");
+  const tickerItems = tickerContent.querySelectorAll(".ticker-item");
+  const itemCount = tickerItems.length;
+
+  // اگر تعداد آیتم‌ها 5 یا کمتر باشد، محتوا را دو برابر کن
+  if (itemCount <= 10) {
+    tickerContent.innerHTML += tickerContent.innerHTML;
+  }
+});
