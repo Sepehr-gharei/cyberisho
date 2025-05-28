@@ -552,7 +552,7 @@ header nav .nav-item .item:last-child::after {
 .solution-section .solution-container .solution-header-icon {
   width: 100px;
   position: absolute;
-  top: -205px;
+  top: -275px;
   left: 245px;
   transform: rotate(342deg);
 }
