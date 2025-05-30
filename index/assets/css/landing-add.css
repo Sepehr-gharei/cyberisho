@@ -332,12 +332,12 @@ header nav .nav-item {
   display: flex;
   align-items: center;
 }
-header nav .nav-item .item {
+header nav .nav-item a {
   padding: 0 20px;
   color: var(--light-white-text);
   position: relative;
 }
-header nav .nav-item .item::after {
+header nav .nav-item a::after {
   content: "";
   background: var(--light-white-text);
   width: 2px;
@@ -347,7 +347,7 @@ header nav .nav-item .item::after {
   left: -1px;
   border-radius: 20px;
 }
-header nav .nav-item .item:last-child::after {
+header nav .nav-item a:last-child::after {
   display: none;
 }
 .your-role-section {
@@ -695,7 +695,7 @@ header nav .nav-item .item:last-child::after {
   font-size: 25px;
 }
 .dangers-section {
-  margin: 130px 0;
+  margin: 100px 0;
 }
 .dangers-section .top-text {
   margin-bottom: 10px;
@@ -736,9 +736,10 @@ header nav .nav-item .item:last-child::after {
   position: absolute;
 }
 .digital-world-section .digital-world-container {
-  width: 600px;
+  width: 680px;
   margin: 0 auto;
-  padding: 30px 45px;
+  font-size: 20px;
+  padding: 30px 31px;
   text-align: center;
   color: var(--light-white-color);
   background: var(--dark-blue-color);
@@ -785,10 +786,10 @@ header .menu-buttons {
   display: none;
 }
 @media (min-width: 1400px) {
-  header nav .nav-item .item {
+  header nav .nav-item a {
     font-size: 18px;
   }
-  header nav .nav-item .item::after {
+  header nav .nav-item a::after {
     height: 20px;
     top: 5px;
   }
@@ -818,6 +819,7 @@ header .menu-buttons {
   .digital-world-section .digital-world-container {
     width: 680px;
     font-size: 18px;
+    padding: 30px 50px;
   }
   footer.secend-footer .main-content .icon {
     width: 170px;
