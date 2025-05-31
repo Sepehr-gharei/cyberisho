@@ -8081,3 +8081,45 @@ color: var(--dark-blue-text-color);
 .glossary-items-section .item:hover{
   box-shadow: 0px 0px 30px 20px var(--light-white-color);
 }
+
+
+
+
+@media (max-width: 1200px) {
+  .glossary-search-section form {
+    width: 42%;
+  }
+}
+@media (max-width: 992px) {
+  .glossary-search-section form {
+    width: 47%;
+  }
+  .glossary-items-section .item {
+    padding: 15px 15px 25px 15px;
+    width: 32%;
+  }
+  .glossary-items-section .item .title {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .glossary-search-section form {
+    width: 72%;
+  }
+  .glossary-items-section .item {
+    padding: 15px 15px 25px 15px;
+    width: 48.5%;
+}
+}
+@media (max-width: 576px) {
+  .glossary-search-section form {
+    width: 97%;
+  }
+  .glossary-items-section .item {
+    padding: 15px 15px 25px 15px;
+    width: 90%;
+}
+.glossary-items-section .row {
+justify-content: center;
+}
+}
